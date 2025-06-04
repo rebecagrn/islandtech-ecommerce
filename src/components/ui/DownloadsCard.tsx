@@ -1,5 +1,4 @@
-import Image from "next/image";
-import AvatarsGroup from "./AvatarsGroup";
+import AvatarsGroup from "@/components/ui/AvatarsGroup";
 
 const avatars = [
   "https://i.pravatar.cc/40?img=10",
@@ -10,7 +9,9 @@ const avatars = [
 export default function DownloadsCard() {
   return (
     <div className="relative bg-white rounded-3xl px-6 py-4 flex flex-col items-center min-w-[170px] min-h-[180px]">
-      <AvatarsGroup avatars={avatars} variant="centered" size={12} />
+      <div className="flex justify-center mb-2 z-10">
+        <AvatarsGroup avatars={avatars} variant="overlap" size={12} />
+      </div>
       <div
         className="relative flex flex-col items-center justify-center w-28 h-28 rounded-full text-white -mt-8 z-0"
         style={{

@@ -1,28 +1,30 @@
 import ArrowTopRightIcon from "@/components/ui/ArrowTopRightIcon";
 import SocialLinks from "@/components/ui/SocialLinks";
-import DottedArrow from "./DottedArrow";
+import DottedArrow from "@/components/ui/DottedArrow";
 
 export default function HeroSection() {
   return (
     <section className="flex flex-col justify-between min-h-[500px] bg-white/60 rounded-3xl p-8">
       <div>
         <div className="flex items-center gap-2 mb-2">
-          <span className="bg-white text-xs p-2 rounded-full">
-            Music is Classic
+          <span className="inline-flex items-center bg-white text-gray-500 text-xs font-medium px-3 py-2 rounded-full">
+            <span className="text-xs">🎵</span>Music is Classic
           </span>
         </div>
-        <h1 className="text-5xl text-gray-900 mb-2 leading-tight font-normal max-w-xl">
+        <h1 className="text-5xl text-gray-900 mb-2 leading-tight font-normal max-w-lg tracking-tight">
           Sequoia Inspiring Musico.
         </h1>
         <div className="flex items-center mb-8 mt-6">
-          <span
-            className="text-[50px] font-bold text-transparent leading-none mr-2"
-            style={{ WebkitTextStroke: "2px #bbb", color: "transparent" }}
-          >
-            01
-          </span>
-          <DottedArrow />
-          <div className="flex flex-col ml-2">
+          <div className="mt-2 flex items-center">
+            <span
+              className="text-5xl font-bold text-transparent leading-none mr-2"
+              style={{ WebkitTextStroke: "2px #bbb", color: "transparent" }}
+            >
+              01
+            </span>
+            <DottedArrow />
+          </div>
+          <div className="flex flex-col ml-2 gap-2">
             <span className="text-lg font-normal text-gray-900 leading-tight">
               Clear Sounds
             </span>

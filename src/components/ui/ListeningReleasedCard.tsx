@@ -1,6 +1,6 @@
 import Image from "next/image";
 import ArrowTopRightIcon from "@/components/ui/ArrowTopRightIcon";
-import AvatarsGroup from "./AvatarsGroup";
+import AvatarsGroup from "@/components/ui/AvatarsGroup";
 import Link from "next/link";
 
 const avatars = [
@@ -12,7 +12,6 @@ const avatars = [
 export default function ListeningReleasedCard() {
   return (
     <div className="relative bg-white rounded-3xl p-4 flex items-center min-w-[320px] min-h-[140px] overflow-hidden">
-      {/* Left content */}
       <div className="flex-1 flex flex-col justify-between h-full z-10">
         <div className="flex items-center gap-2 mb-2">
           <span className="bg-white text-gray-600/80 text-[11px] px-2 py-0.5 rounded-full flex items-center gap-1 border-2 border-gray-200">
@@ -22,7 +21,7 @@ export default function ListeningReleasedCard() {
         <div className="font-light text-gray-900 text-base leading-tight mb-2 max-w-32">
           Listening Has Been Released
         </div>
-        <AvatarsGroup variant="centered" avatars={avatars} size={12} />
+        <AvatarsGroup variant="overlap" avatars={avatars} size={12} />
       </div>
       <div className="absolute top-0 right-0 h-full w-1/2 z-0 flex items-center justify-end">
         <div className="relative h-full w-full flex items-center justify-end">
@@ -41,7 +40,7 @@ export default function ListeningReleasedCard() {
         </Link>
       </div>
       <div
-        className="absolute bottom-3 right-4 rounded-full px-2 py-0.5 flex items-center gap-1 text-gray-900 text-xs z-20"
+        className="absolute bottom-3 right-4 rounded-full px-1.5 py-0.5 flex items-center gap-1 text-gray-900 text-xs z-20"
         style={{
           background: "rgba(255, 255, 255, 0.15)",
           borderRadius: "16px",

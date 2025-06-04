@@ -1,11 +1,10 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
+import HeartIcon from "@/components/ui/HeartIcon";
 
 const productImages = [
-  "/placeholder1.png",
-  "/placeholder2.png",
-  "/placeholder3.png",
+  "https://unsplash.com/photos/music-1200x800",
+  "https://unsplash.com/photos/music-1200x800",
+  "https://unsplash.com/photos/music-1200x800",
 ];
 
 export default function MoreProductsCard() {
@@ -14,9 +13,10 @@ export default function MoreProductsCard() {
       {/* Heart icon */}
       <span className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-gray-100">
         {/* <FontAwesomeIcon icon={faHeart} className="text-red-500 w-5 h-5" /> */}
+        <HeartIcon className="text-[#F44336]" />
       </span>
       <div className="mb-2">
-        <div className="font-normal text-gray-900 text-base leading-tight">
+        <div className="font-normal text-gray-900 text-base leading-tight tracking-tight">
           More Products
         </div>
         <div className="text-xs text-gray-500 font-normal">460 plus items.</div>

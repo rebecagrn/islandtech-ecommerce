@@ -52,22 +52,25 @@ export default function AvatarsGroup({
       </div>
     );
   }
+  // Overlap variant
   return (
-    <div className="flex -space-x-4">
-      {avatars.map((src, idx) => (
-        <span
-          key={src}
-          className={`w-${size} h-${size} rounded-full border-2 border-white overflow-hidden -ml-2 first:ml-0`}
-        >
-          <Image
-            src={src}
-            alt={`Avatar ${idx + 1}`}
-            width={size * 4}
-            height={size * 4}
-            className="object-cover w-full h-full"
-          />
-        </span>
-      ))}
+    <div className="relative overflow-visible min-w-[100px]">
+      <div className="flex -space-x-4 overflow-visible">
+        {avatars.map((src, idx) => (
+          <span
+            key={src}
+            className={`w-${size} h-${size} rounded-full border-2 border-white overflow-hidden -ml-2 first:ml-0`}
+          >
+            <Image
+              src={src}
+              alt={`Avatar ${idx + 1}`}
+              width={size * 4}
+              height={size * 4}
+              className="object-cover w-full h-full"
+            />
+          </span>
+        ))}
+      </div>
     </div>
   );
 }

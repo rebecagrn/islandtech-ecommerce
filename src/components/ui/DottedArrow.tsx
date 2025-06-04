@@ -18,7 +18,7 @@ export default function DottedArrow({ className }: DottedArrowProps) {
         x2="110"
         y2="12"
         stroke="#bbb"
-        strokeDasharray="2 4"
+        strokeDasharray="1 2"
         strokeWidth="2"
       />
       <polygon points="110,6 120,12 110,18" fill="#bbb" />
