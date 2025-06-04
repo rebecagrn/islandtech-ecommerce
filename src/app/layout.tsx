@@ -1,20 +1,14 @@
-import { Poppins } from "next/font/google";
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import "./globals.css";
-import { Toaster } from "sonner";
-import { cn } from "@/lib/utils";
-import { ClerkProvider, SignedIn } from "@clerk/nextjs";
-import { Navbar } from "@/components/layout/Navbar";
-import { Metadata } from "next";
-// import { OnboardingGate } from "@/components/onboarding/OnboardingGate";
+import Layout from "@/components/layout/Layout";
 
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-poppins",
-});
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "LetsPlay",
+  title: "Island Tech - Sua Loja de Tecnologia",
+  description:
+    "Encontre os melhores produtos de tecnologia com os preços mais competitivos do mercado.",
 };
 
 export default function RootLayout({
@@ -23,25 +17,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <ClerkProvider>
-      <html lang="en" suppressHydrationWarning>
-        <head />
-        <body
-          className={cn(
-            "min-h-screen lg:h-full lg:overflow-hidden bg-background antialiased",
-            poppins.className
-          )}
-        >
-          <div className="relative flex min-h-screen md:h-full flex-col">
-            <SignedIn>
-              <Navbar />
-            </SignedIn>
-            <main className="flex-1 md:overflow-hidden">{children}</main>
-            {/* <OnboardingGate /> */}
-          </div>
-          <Toaster richColors position="top-center" />
-        </body>
-      </html>
-    </ClerkProvider>
+    <html lang="pt-BR">
+      <body className={inter.className}>
+        <Layout>{children}</Layout>
+      </body>
+    </html>
   );
 }
