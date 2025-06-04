@@ -1,6 +1,5 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
-import { Product } from "@/types/product";
 import productData from "@/mocks/data.json";
 
 interface ProductPageProps {

@@ -15,7 +15,7 @@ export default function ListeningReleasedCard() {
       {/* Left content */}
       <div className="flex-1 flex flex-col justify-between h-full z-10">
         <div className="flex items-center gap-2 mb-2">
-          <span className="bg-white text-gray-600/80 text-[11px] px-2 py-1 rounded-full flex items-center gap-1 border-2 border-gray-200">
+          <span className="bg-white text-gray-600/80 text-[11px] px-2 py-0.5 rounded-full flex items-center gap-1 border-2 border-gray-200">
             <span className="">❤️‍🔥</span> Popular
           </span>
         </div>
@@ -35,13 +35,13 @@ export default function ListeningReleasedCard() {
           />
         </div>
       </div>
-      <div className="absolute top-3 right-3 z-20">
+      <div className="absolute top-2 right-2 z-20">
         <Link href="/">
           <ArrowTopRightIcon variant="secondary" />
         </Link>
       </div>
       <div
-        className="absolute bottom-4 right-5 rounded-full px-2 py-1 flex items-center gap-1 text-gray-900 text-xs z-20"
+        className="absolute bottom-3 right-4 rounded-full px-2 py-0.5 flex items-center gap-1 text-gray-900 text-xs z-20"
         style={{
           background: "rgba(255, 255, 255, 0.15)",
           borderRadius: "16px",

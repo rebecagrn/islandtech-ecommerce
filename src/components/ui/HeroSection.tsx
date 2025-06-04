@@ -1,0 +1,42 @@
+import ArrowTopRightIcon from "@/components/ui/ArrowTopRightIcon";
+import SocialLinks from "@/components/ui/SocialLinks";
+import DottedArrow from "./DottedArrow";
+
+export default function HeroSection() {
+  return (
+    <section className="flex flex-col justify-between min-h-[500px] bg-white/60 rounded-3xl p-8">
+      <div>
+        <div className="flex items-center gap-2 mb-2">
+          <span className="bg-white text-xs p-2 rounded-full">
+            Music is Classic
+          </span>
+        </div>
+        <h1 className="text-5xl text-gray-900 mb-2 leading-tight font-normal max-w-xl">
+          Sequoia Inspiring Musico.
+        </h1>
+        <div className="flex items-center mb-8 mt-6">
+          <span
+            className="text-[50px] font-bold text-transparent leading-none mr-2"
+            style={{ WebkitTextStroke: "2px #bbb", color: "transparent" }}
+          >
+            01
+          </span>
+          <DottedArrow />
+          <div className="flex flex-col ml-2">
+            <span className="text-lg font-normal text-gray-900 leading-tight">
+              Clear Sounds
+            </span>
+            <span className="text-gray-500 text-base font-normal -mt-1 max-w-72 leading-5">
+              Making your dream music come true stay with Sequios Sounds!
+            </span>
+          </div>
+        </div>
+        <button className="flex items-center bg-lime-200 hover:bg-lime-400 text-black font-medium pl-4 pr-1 py-1 rounded-full text-sm transition">
+          <span className="pr-2">View All Products</span>
+          <ArrowTopRightIcon />
+        </button>
+      </div>
+      <SocialLinks />
+    </section>
+  );
+}

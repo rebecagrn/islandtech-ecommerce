@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
 
 export default function NotFound() {
   return (
@@ -20,9 +19,9 @@ export default function NotFound() {
             moved or deleted.
           </p>
           <Link href="/">
-            <Button className="bg-letsplay-red hover:bg-letsplay-red/90 text-white px-8 py-6 text-lg">
+            <button className="bg-letsplay-red hover:bg-letsplay-red/90 text-white px-8 py-6 text-lg">
               Return to Home
-            </Button>
+            </button>
           </Link>
         </div>
       </div>

@@ -5,42 +5,16 @@ import SocialLinks from "@/components/ui/SocialLinks";
 import MoreProductsCard from "@/components/ui/MoreProductsCard";
 import DownloadsCard from "@/components/ui/DownloadsCard";
 import ListeningReleasedCard from "@/components/ui/ListeningReleasedCard";
+import HeroSection from "@/components/ui/HeroSection";
 
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col">
       <LandingHeader />
-      {/* Main Content */}
-      <main className="flex-1 flex flex-col lg:flex-row gap-8 py-8">
-        <div className="flex flex-col gap-6">
-          {/* Left: Hero Section */}
-          <section className="flex-1 bg-white/60 rounded-3xl p-8 flex flex-col justify-between min-h-[500px]">
-            <div>
-              <div className="flex items-center gap-2 mb-2">
-                <span className="bg-gray-200 text-xs px-2 py-1 rounded-full">
-                  Music is Classic
-                </span>
-              </div>
-              <h1 className="text-5xl text-gray-900 mb-2 leading-tight">
-                Sequoia Inspiring Musico.
-              </h1>
-              <div className="text-lg text-gray-700 mb-6">Clear Sounds</div>
-              <div className="flex items-center gap-4 mb-8">
-                <span className="text-2xl font-bold text-gray-300">01</span>
-                <span className="text-gray-500">
-                  Making your dream music come true stay with Sequios Sounds!
-                </span>
-              </div>
-              <button className="flex items-center bg-lime-200 hover:bg-lime-400 text-black font-medium pl-4 pr-1 py-1 rounded-full text-sm transition">
-                <span className="pr-2">View All Products</span>
-                <ArrowTopRightIcon />
-              </button>
-            </div>
-            <SocialLinks />
-          </section>
-
-          {/* Bottom Cards */}
-          <section className="flex flex-col md:flex-row gap-4 pb-8">
+      <main className="flex-1 flex flex-col lg:flex-row gap-4 py-4 w-full">
+        <div className="flex flex-col gap-6 lg:w-4/5">
+          <HeroSection />
+          <section className="flex flex-col md:flex-row gap-4 pb-8 lg:w-4/5">
             <MoreProductsCard />
             <DownloadsCard />
             <ListeningReleasedCard />
@@ -48,8 +22,7 @@ export default function Home() {
         </div>
 
         {/* Right: Sidebar */}
-        <aside className="w-full lg:w-64 flex flex-col gap-6">
-          {/* Popular Colors */}
+        <aside className="w-full lg:w-1/5 flex flex-col gap-6">
           <PopularColors />
           {/* Product Cards */}
           <div className="bg-white rounded-2xl p-4 flex items-center gap-4 mb-2">
