@@ -34,7 +34,7 @@ export default function LandingHeader() {
           </span>
           <span className="w-10 h-10 rounded-full overflow-hidden bg-gray-300 border-2 border-gray-200">
             <Image
-              src="https://i.pravatar.cc/40?img=7"
+              src="https://i.pravatar.cc/40?img=20"
               alt="User avatar"
               width={50}
               height={50}

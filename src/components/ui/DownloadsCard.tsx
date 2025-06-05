@@ -13,10 +13,9 @@ export default function DownloadsCard() {
         <AvatarsGroup avatars={avatars} variant="overlap" size={12} />
       </div>
       <div
-        className="relative flex flex-col items-center justify-center w-28 h-28 rounded-full text-white -mt-8 z-0"
+        className="relative flex flex-col items-center justify-center w-24 h-24 rounded-full text-white -mt-6 z-0"
         style={{
-          background:
-            "radial-gradient(circle at 60% 40%, #60a5fa 0%, #2563eb 100%)",
+          background: "linear-gradient(to bottom, #2563eb 0%, #60a5fa 100%)",
         }}
       >
         <div className="text-2xl font-light">5m+</div>

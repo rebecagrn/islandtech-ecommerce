@@ -20,20 +20,20 @@ export default function Home() {
           </section>
         </div>
 
-        {/* Right: Sidebar */}
         <aside className="w-full lg:w-1/5 flex flex-col gap-4">
           <PopularColors />
           <ProductSidebarCard
             title="New Gen X-Bud"
-            image="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=facearea&w=400&q=80"
+            image="/assets/images/headphone-1.png"
             arrowPosition="bottom-left"
+            showOverlay={false}
           />
           <ProductSidebarCard
             title="Light Grey Surface Headphone"
             subtitle="Boosted with bass"
-            image="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=facearea&w=400&q=80"
+            image="/assets/images/vr-background.png"
             textAlign="bottom"
-            // className="h-[330px]"
+            className="flex-1 max-h-[345px]"
           />
         </aside>
       </main>

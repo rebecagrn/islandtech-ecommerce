@@ -2,17 +2,15 @@ import Image from "next/image";
 import HeartIcon from "@/components/ui/HeartIcon";
 
 const productImages = [
-  "https://unsplash.com/photos/music-1200x800",
-  "https://unsplash.com/photos/music-1200x800",
-  "https://unsplash.com/photos/music-1200x800",
+  "/assets/images/product-1.jpg",
+  "/assets/images/product-2.jpg",
+  "/assets/images/product-3.jpg",
 ];
 
 export default function MoreProductsCard() {
   return (
     <div className="relative bg-white rounded-3xl p-4 flex flex-col min-w-[260px] min-h-[140px]">
-      {/* Heart icon */}
       <span className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-gray-100">
-        {/* <FontAwesomeIcon icon={faHeart} className="text-red-500 w-5 h-5" /> */}
         <HeartIcon className="text-[#F44336]" />
       </span>
       <div className="mb-2">
@@ -25,14 +23,15 @@ export default function MoreProductsCard() {
         {productImages.map((src, idx) => (
           <div
             key={idx}
-            className="w-16 h-16 rounded-xl overflow-hidden bg-gray-100 flex items-center justify-center"
+            className="w-16 h-20 rounded-[20px] overflow-hidden bg-gray-100 flex items-center justify-center"
           >
             <Image
-              src={src}
+              src={productImages[idx]}
               alt={`Product ${idx + 1}`}
               width={64}
-              height={74}
+              height={80}
               className="object-cover w-full h-full"
+              priority
             />
           </div>
         ))}

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import ArrowTopRightIcon from "@/components/ui/ArrowTopRightIcon";
+import { cn } from "@/lib/utils";
 
 interface ProductSidebarCardProps {
   title: string;
@@ -8,6 +9,7 @@ interface ProductSidebarCardProps {
   className?: string;
   arrowPosition?: "top-right" | "bottom-left";
   textAlign?: "bottom" | "default";
+  showOverlay?: boolean;
 }
 
 export default function ProductSidebarCard({
@@ -17,6 +19,7 @@ export default function ProductSidebarCard({
   className = "",
   arrowPosition = "top-right",
   textAlign = "default",
+  showOverlay = true,
 }: ProductSidebarCardProps) {
   return (
     <div
@@ -40,12 +43,15 @@ export default function ProductSidebarCard({
           className="object-cover object-right rounded-3xl"
           style={{ minWidth: 180 }}
         />
-        {/* <div className="absolute inset-0 bg-gradient-to-t from-white/90 to-transparent pointer-events-none" /> */}
+        {showOverlay && (
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white pointer-events-none" />
+        )}
       </div>
       <div
-        className={`relative z-10 p-4 flex flex-col h-full ${
+        className={cn(
+          "relative z-10 p-4 flex flex-col h-full",
           textAlign === "bottom" ? "justify-end" : "justify-between"
-        }`}
+        )}
       >
         <div>
           <div className="font-medium text-gray-900 text-lg leading-5 mb-1">
