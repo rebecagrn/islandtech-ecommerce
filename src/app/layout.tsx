@@ -6,9 +6,9 @@ import Layout from "@/components/layout/Layout";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Island Tech - Sua Loja de Tecnologia",
+  title: "Island Tech - Your Tech Partner",
   description:
-    "Encontre os melhores produtos de tecnologia com os preços mais competitivos do mercado.",
+    "Your Tech Partner for all your tech needs. We offer a wide range of products and services to meet your needs.",
 };
 
 export default function RootLayout({

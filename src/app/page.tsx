@@ -8,7 +8,7 @@ import ProductSidebarCard from "@/components/ui/ProductSidebarCard";
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col max-w-7xl mx-auto">
       <LandingHeader />
       <main className="flex-1 flex flex-col lg:flex-row gap-4 py-4 w-full">
         <div className="flex flex-col gap-4 lg:w-4/5">

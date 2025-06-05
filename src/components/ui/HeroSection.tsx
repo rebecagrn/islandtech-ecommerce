@@ -30,7 +30,7 @@ export default function HeroSection() {
               <span className="text-lg font-normal text-gray-900 leading-tight">
                 Clear Sounds
               </span>
-              <span className="text-gray-500 text-base font-normal -mt-1 max-w-72 leading-5">
+              <span className="text-gray-500 text-sm font-normal -mt-1 max-w-72 leading-5">
                 Making your dream music come true stay with Sequios Sounds!
               </span>
             </div>

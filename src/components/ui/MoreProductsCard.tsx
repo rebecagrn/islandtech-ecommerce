@@ -9,7 +9,7 @@ const productImages = [
 
 export default function MoreProductsCard() {
   return (
-    <div className="relative bg-white rounded-3xl p-4 flex flex-col min-w-[260px] min-h-[140px]">
+    <div className="relative bg-white/60 rounded-3xl p-4 flex flex-col min-w-[260px] min-h-[140px]">
       <span className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-gray-100">
         <HeartIcon className="text-[#F44336]" />
       </span>

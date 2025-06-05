@@ -5,7 +5,7 @@ import HeartIcon from "@/components/ui/HeartIcon";
 
 export default function LandingHeader() {
   return (
-    <header className="flex items-center justify-between p-2 bg-gray-50 rounded-full w-full gap-2">
+    <header className="flex items-center justify-between p-2 bg-white/60 rounded-full w-full gap-2">
       <Logo />
       <div className="flex-1 flex justify-start">
         <SearchBar />

@@ -8,7 +8,7 @@ const avatars = [
 
 export default function DownloadsCard() {
   return (
-    <div className="relative bg-white rounded-3xl px-6 py-4 flex flex-col items-center min-w-[170px] min-h-[180px]">
+    <div className="relative bg-white/60 rounded-3xl px-6 py-4 flex flex-col items-center min-w-[170px] min-h-[180px]">
       <div className="flex justify-center mb-2 z-10">
         <AvatarsGroup avatars={avatars} variant="overlap" size={12} />
       </div>

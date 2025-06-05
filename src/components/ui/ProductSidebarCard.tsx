@@ -23,7 +23,7 @@ export default function ProductSidebarCard({
 }: ProductSidebarCardProps) {
   return (
     <div
-      className={`relative bg-white rounded-3xl flex flex-col justify-between overflow-hidden min-h-[200px] ${className}`}
+      className={`relative bg-white/60 rounded-3xl flex flex-col justify-between overflow-hidden min-h-[200px] ${className}`}
     >
       {arrowPosition === "top-right" ? (
         <div className="absolute top-2 right-2 z-20">
@@ -52,9 +52,9 @@ export default function ProductSidebarCard({
         )}
       >
         <div>
-          <div className="font-medium text-gray-900 text-lg leading-5 mb-1">
+          <h3 className="font-normal text-gray-900 text-lg leading-5 mb-1">
             {title}
-          </div>
+          </h3>
         </div>
         {subtitle && (
           <div className={`text-xs text-gray-600 font-normal leading-tight`}>

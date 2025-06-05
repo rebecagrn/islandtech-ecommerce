@@ -11,7 +11,7 @@ const avatars = [
 
 export default function ListeningReleasedCard() {
   return (
-    <div className="relative bg-white rounded-3xl p-4 flex items-center min-w-[320px] min-h-[140px] overflow-hidden flex-1">
+    <div className="relative bg-white/60 rounded-3xl p-4 flex items-center min-w-[320px] min-h-[140px] overflow-hidden flex-1">
       <div className="flex-1 flex flex-col justify-between h-full z-10">
         <div className="flex items-center gap-2 mb-2">
           <span className="bg-white text-gray-600/80 text-[11px] px-2 py-0.5 rounded-full flex items-center gap-1 border-2 border-gray-200">
