@@ -2,6 +2,8 @@ import Image from "next/image";
 import { Logo } from "@/components/layout/Logo";
 import SearchBar from "@/components/shared/SearchBar";
 import HeartIcon from "@/components/ui/HeartIcon";
+import ShoppingBagIcon from "@/components/ui/ShoppingBagIcon";
+import Link from "next/link";
 
 export default function LandingHeader() {
   return (
@@ -12,18 +14,9 @@ export default function LandingHeader() {
       </div>
       <div className="flex items-center gap-2">
         <button className="flex items-center gap-2 bg-white p-3 rounded-full justify-center">
-          <svg
-            width="24"
-            height="24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-          >
-            <path d="M6 6h15l-1.5 9h-13z" />
-            <circle cx="9" cy="21" r="1" />
-            <circle cx="19" cy="21" r="1" />
-          </svg>
+          <Link href="/cart">
+            <ShoppingBagIcon className="text-gray-900" />
+          </Link>
         </button>
         <div className="flex items-center gap-2 bg-white p-2 rounded-full justify-center">
           <HeartIcon className="text-[#F44336]" />

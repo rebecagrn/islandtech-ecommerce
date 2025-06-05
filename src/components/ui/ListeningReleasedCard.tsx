@@ -14,7 +14,7 @@ export default function ListeningReleasedCard() {
     <div className="relative bg-white/60 rounded-3xl p-4 flex flex-row items-center h-full overflow-hidden gap-4">
       <div className="flex flex-col justify-between h-full z-10 flex-1 min-w-0">
         <div className="flex items-center gap-2 mb-2">
-          <span className="bg-white text-gray-600/80 text-[11px] px-2 py-0.5 rounded-full flex items-center gap-1 border-2 border-gray-200">
+          <span className="bg-transparent text-gray-600/80 text-[11px] px-2 py-1 rounded-full flex items-center gap-1 border-2 border-gray-200">
             <span className="">❤️‍🔥</span> Popular
           </span>
         </div>
@@ -23,13 +23,12 @@ export default function ListeningReleasedCard() {
         </div>
         <AvatarsGroup variant="overlap" avatars={avatars} size={12} />
       </div>
-      <div className="relative flex items-center justify-end h-full min-w-[120px] max-w-[220px] flex-shrink-0">
+      <div className="absolute inset-0 flex items-end justify-end z-0">
         <Image
-          src="/assets/images/vr-background.png"
-          alt="Listening Product"
-          width={160}
-          height={120}
-          className="object-cover rounded-2xl h-full w-auto max-h-[120px]"
+          src="/assets/images/hand-with-lens.png"
+          alt="Hand with lens"
+          fill
+          className="object-contain object-right rounded-3xl min-w-[180px] h-auto"
         />
         <div className="absolute top-2 right-2 z-20">
           <Link href="/">
@@ -37,7 +36,7 @@ export default function ListeningReleasedCard() {
           </Link>
         </div>
         <div
-          className="absolute bottom-3 right-4 rounded-full px-1.5 py-0.5 flex items-center gap-1 text-gray-900 text-xs z-20"
+          className="absolute bottom-3 right-4 rounded-full px-1.5 py-1 flex items-center gap-1 text-gray-900 text-xs z-20"
           style={{
             background: "rgba(255, 255, 255, 0.15)",
             borderRadius: "16px",

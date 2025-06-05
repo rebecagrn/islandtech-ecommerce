@@ -30,9 +30,9 @@ export default function SearchBar({
         placeholder={placeholder}
         className="w-full px-6 py-3 rounded-full border-none bg-white text-gray-900 placeholder-black focus:outline-none focus:ring-2 focus:ring-black text-sm"
       />
-      <button className="absolute right-1 top-1/2 -translate-y-1/2 bg-black hover:bg-gray-900 text-white rounded-full p-2 transition">
+      <button className="absolute right-1 top-1/2 -translate-y-1/2 bg-black text-white rounded-full p-2 transition">
         <span className="sr-only">Search</span>
-        <SearchIcon />
+        <SearchIcon className="text-white hover:text-lime-200" />
       </button>
     </div>
   );

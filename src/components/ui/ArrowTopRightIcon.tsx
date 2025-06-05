@@ -12,7 +12,7 @@ export default function ArrowTopRightIcon({
 }: ArrowTopRightIconProps) {
   const isSecondary = variant === "secondary";
   const bgClass = isSecondary
-    ? "bg-white text-black hover:bg-black group"
+    ? "bg-white text-black group"
     : "bg-black text-white hover:bg-lime-200 hover:text-black group";
 
   return (

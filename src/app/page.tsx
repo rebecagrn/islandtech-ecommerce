@@ -32,7 +32,7 @@ export default function Home() {
           <div className="row-span-1">
             <ProductSidebarCard
               title="New Gen X-Bud"
-              image="/assets/images/headphone-1.png"
+              image="/assets/images/airpods-pro.jpg"
               arrowPosition="bottom-left"
               showOverlay={false}
               className="h-full bg-white/60"
@@ -42,7 +42,7 @@ export default function Home() {
             <ProductSidebarCard
               title="Light Grey Surface Headphone"
               subtitle="Boosted with bass"
-              image="/assets/images/vr-background.png"
+              image="/assets/images/woman-vr-2.png"
               textAlign="bottom"
               className="h-full bg-gray-200"
             />

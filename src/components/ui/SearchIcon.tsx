@@ -9,7 +9,7 @@ export default function SearchIcon({ className }: SearchIconProps) {
       height="22"
       fill="none"
       stroke="currentColor"
-      strokeWidth="2"
+      strokeWidth="1.5"
       viewBox="0 0 24 24"
       className={className}
     >

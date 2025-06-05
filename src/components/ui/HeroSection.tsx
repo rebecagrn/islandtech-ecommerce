@@ -9,9 +9,9 @@ export default function HeroSection() {
       <div className="flex-1 flex flex-col justify-between max-w-xl">
         <div>
           <div className="flex items-center gap-2 mb-2">
-            <span className="inline-flex items-center bg-white text-gray-500 text-xs font-medium px-3 py-2 rounded-full">
-              <span className="text-xs">🎵</span>Music is Classic
-            </span>
+            <div className="inline-flex items-center bg-white text-gray-500 text-xs font-medium px-3 py-2 rounded-full">
+              <span className="text-xs">🎛️</span>Music is Classic
+            </div>
           </div>
           <h1 className="text-5xl text-gray-900 mb-2 leading-tight font-normal max-w-lg tracking-tight">
             Sequoia Inspiring Musico.
@@ -30,7 +30,7 @@ export default function HeroSection() {
               <span className="text-lg font-normal text-gray-900 leading-tight">
                 Clear Sounds
               </span>
-              <span className="text-gray-500 text-sm font-normal -mt-1 max-w-72 leading-5">
+              <span className="text-gray-500 text-sm font-normal -mt-1 max-w-72 leading-4">
                 Making your dream music come true stay with Sequios Sounds!
               </span>
             </div>
@@ -42,7 +42,6 @@ export default function HeroSection() {
         </div>
         <SocialLinks />
       </div>
-      {/* Right: Headphone Slider */}
       <div className="flex-1 flex items-center justify-center min-w-[340px]">
         <HeroSlider />
       </div>

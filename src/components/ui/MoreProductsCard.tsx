@@ -2,9 +2,9 @@ import Image from "next/image";
 import HeartIcon from "@/components/ui/HeartIcon";
 
 const productImages = [
-  "/assets/images/product-1.jpg",
-  "/assets/images/product-2.jpg",
-  "/assets/images/product-3.jpg",
+  "/assets/images/box-1.jpeg",
+  "/assets/images/airpods-pro.jpg",
+  "/assets/images/woman-vr.jpeg",
 ];
 
 export default function MoreProductsCard() {
@@ -23,7 +23,7 @@ export default function MoreProductsCard() {
         {productImages.map((_, idx) => (
           <div
             key={idx}
-            className="w-16 h-20 rounded-[20px] overflow-hidden bg-gray-100 flex items-center justify-center"
+            className="w-16 h-20 rounded-2xl overflow-hidden bg-gray-100 flex items-center justify-center"
           >
             <Image
               src={productImages[idx]}
