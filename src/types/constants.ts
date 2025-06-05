@@ -1,7 +1,7 @@
 export const colors = [
   {
     name: "Blue",
-    gradient: "bg-gradient-to-br from-blue-300 to-blue-600",
+    gradient: "bg-gradient-to-br from-blue-300 to-blue-800",
     ring: "ring-blue-200",
   },
   {

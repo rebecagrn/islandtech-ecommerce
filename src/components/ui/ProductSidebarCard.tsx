@@ -1,6 +1,7 @@
 import Image from "next/image";
 import ArrowTopRightIcon from "@/components/ui/ArrowTopRightIcon";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 interface ProductSidebarCardProps {
   title: string;
@@ -23,15 +24,19 @@ export default function ProductSidebarCard({
 }: ProductSidebarCardProps) {
   return (
     <div
-      className={`relative bg-white/60 rounded-3xl flex flex-col justify-between overflow-hidden min-h-[200px] ${className}`}
+      className={`relative rounded-3xl flex flex-col justify-between overflow-hidden h-full ${className}`}
     >
       {arrowPosition === "top-right" ? (
         <div className="absolute top-2 right-2 z-20">
-          <ArrowTopRightIcon variant="secondary" />
+          <Link href="/">
+            <ArrowTopRightIcon variant="secondary" />
+          </Link>
         </div>
       ) : (
         <div className="absolute bottom-2 left-2 z-20">
-          <ArrowTopRightIcon variant="secondary" />
+          <Link href="/">
+            <ArrowTopRightIcon variant="secondary" />
+          </Link>
         </div>
       )}
       <div className="absolute inset-0 flex items-end justify-end z-0">
@@ -42,7 +47,7 @@ export default function ProductSidebarCard({
           className="object-cover object-right rounded-3xl min-w-[180px] h-auto"
         />
         {showOverlay && (
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white pointer-events-none" />
+          <div className="absolute inset-x-0 bottom-0 pointer-events-none bg-gradient-to-t from-white via-white/70 to-transparent h-[50%]" />
         )}
       </div>
       <div
