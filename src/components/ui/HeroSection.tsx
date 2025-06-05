@@ -5,7 +5,7 @@ import HeroSlider from "@/components/ui/HeroSlider";
 
 export default function HeroSection() {
   return (
-    <section className="flex flex-col md:flex-row justify-between min-h-[500px] bg-white/60 rounded-3xl p-8 gap-4">
+    <section className="flex flex-col md:flex-row justify-between bg-white/60 rounded-3xl p-8 gap-4">
       <div className="flex-1 flex flex-col justify-between max-w-xl">
         <div>
           <div className="flex items-center gap-2 mb-2">

@@ -23,8 +23,7 @@ export default function ProductSidebarCard({
 }: ProductSidebarCardProps) {
   return (
     <div
-      className={`relative bg-white rounded-3xl flex flex-col justify-between overflow-hidden ${className}`}
-      style={{ minHeight: 220 }}
+      className={`relative bg-white rounded-3xl flex flex-col justify-between overflow-hidden min-h-[200px] ${className}`}
     >
       {arrowPosition === "top-right" ? (
         <div className="absolute top-2 right-2 z-20">
@@ -40,8 +39,7 @@ export default function ProductSidebarCard({
           src={image}
           alt={title}
           fill
-          className="object-cover object-right rounded-3xl"
-          style={{ minWidth: 180 }}
+          className="object-cover object-right rounded-3xl min-w-[180px] h-auto"
         />
         {showOverlay && (
           <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white pointer-events-none" />

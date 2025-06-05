@@ -27,7 +27,7 @@ export default function HeadphoneSlider() {
           alt="Headphone"
           width={260}
           height={260}
-          className="z-10 object-contain drop-shadow-2xl"
+          className="z-10 object-contain drop-shadow-2xl h-auto"
           priority
         />
         {floatingDots.map((dot, i) => (

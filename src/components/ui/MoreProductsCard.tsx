@@ -20,7 +20,7 @@ export default function MoreProductsCard() {
         <div className="text-xs text-gray-500 font-normal">460 plus items.</div>
       </div>
       <div className="flex gap-3 mt-4">
-        {productImages.map((src, idx) => (
+        {productImages.map((_, idx) => (
           <div
             key={idx}
             className="w-16 h-20 rounded-[20px] overflow-hidden bg-gray-100 flex items-center justify-center"

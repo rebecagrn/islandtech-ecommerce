@@ -29,8 +29,7 @@ export default function ListeningReleasedCard() {
             src="/assets/images/vr-background.png"
             alt="Listening Product"
             fill
-            className="object-cover object-right"
-            style={{ right: "-10%", minWidth: 180 }}
+            className="object-cover object-right h-auto min-w-[180px] right-[-10%]"
           />
         </div>
       </div>
