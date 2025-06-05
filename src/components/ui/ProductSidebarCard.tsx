@@ -45,6 +45,7 @@ export default function ProductSidebarCard({
           alt={title}
           fill
           className="object-cover object-right rounded-3xl min-w-[180px] h-auto"
+          loading="lazy"
         />
         {showOverlay && (
           <div className="absolute inset-x-0 bottom-0 pointer-events-none bg-gradient-to-t from-white via-white/70 to-transparent h-[50%]" />

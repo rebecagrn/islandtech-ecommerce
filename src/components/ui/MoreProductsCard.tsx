@@ -31,7 +31,7 @@ export default function MoreProductsCard() {
               width={64}
               height={80}
               className="object-cover w-full h-full"
-              priority
+              loading="lazy"
             />
           </div>
         ))}

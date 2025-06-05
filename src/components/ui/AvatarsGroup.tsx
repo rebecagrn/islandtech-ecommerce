@@ -25,6 +25,7 @@ export default function AvatarsGroup({
             width={size * 4}
             height={size * 4}
             className="object-cover w-full h-full"
+            loading="lazy"
           />
         </span>
         <span
@@ -36,6 +37,7 @@ export default function AvatarsGroup({
             width={size * 4}
             height={size * 4}
             className="object-cover w-full h-full"
+            loading="lazy"
           />
         </span>
         <span
@@ -47,6 +49,7 @@ export default function AvatarsGroup({
             width={size * 4}
             height={size * 4}
             className="object-cover w-full h-full"
+            loading="lazy"
           />
         </span>
       </div>
@@ -67,6 +70,7 @@ export default function AvatarsGroup({
               width={size * 4}
               height={size * 4}
               className="object-cover w-full h-full"
+              loading="lazy"
             />
           </span>
         ))}

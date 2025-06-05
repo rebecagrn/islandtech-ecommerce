@@ -20,40 +20,38 @@ export default function HeadphoneSlider() {
     );
 
   return (
-    <div className="relative flex items-center justify-center min-h-[420px] max-h-[420px] w-full">
-      <div>
-        <Image
-          src={headphoneImages[current]}
-          alt="Headphone"
-          width={450}
-          height={450}
-          className="z-10 object-contain drop-shadow-2xl h-auto overflow-hidden"
-          priority
+    <div className="relative aspect-square w-[420px] flex items-center justify-center">
+      <Image
+        src={headphoneImages[current]}
+        alt="Headphone"
+        fill
+        className="object-contain drop-shadow-2xl"
+        priority
+      />
+
+      {floatingDots.map((dot, i) => (
+        <span
+          key={i}
+          className="absolute rounded-full shadow-lg"
+          style={{
+            top: dot.top,
+            left: dot.left,
+            width: dot.size,
+            height: dot.size,
+            background: dot.color,
+            filter: "blur(0.5px)",
+            zIndex: 1,
+          }}
         />
-        {floatingDots.map((dot, i) => (
-          <span
-            key={i}
-            className="absolute rounded-full shadow-lg"
-            style={{
-              top: dot.top,
-              left: dot.left,
-              width: dot.size,
-              height: dot.size,
-              background: dot.color,
-              filter: "blur(0.5px)",
-              zIndex: 1,
-            }}
-          />
-        ))}
-        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex z-20">
-          <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-md hover:bg-gray-100 transition">
-            <button aria-label="Previous" onClick={prev}>
-              <ArrowLeftIcon />
-            </button>
-            <button aria-label="Next" onClick={next}>
-              <ArrowRightIcon />
-            </button>
-          </div>
+      ))}
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex z-20">
+        <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-md hover:bg-gray-100 transition">
+          <button aria-label="Previous" onClick={prev}>
+            <ArrowLeftIcon />
+          </button>
+          <button aria-label="Next" onClick={next}>
+            <ArrowRightIcon />
+          </button>
         </div>
       </div>
     </div>
