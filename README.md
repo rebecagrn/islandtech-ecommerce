@@ -1,26 +1,46 @@
 # IslandTech App
 
-A modern web application for generating and managing color palettes from images. Built with Next.js, TypeScript, and Tailwind CSS.
+A modern e-commerce web application built with Next.js, TypeScript, and Tailwind CSS, focused on performance, pixel-perfect design, and user experience.
 
-## Live Demo
+## Demo
 
-## Project Demo
+## Main Features
 
-https://github.com/user-attachments/assets/cefee8e4-f8ac-485d-8c92-22b6ffecfa36
+- Responsive layout and custom design system
+- Reusable components (cards, sliders, sidebar, avatars, etc)
+- Image optimization with Next.js
+- Lazy loading for offscreen images
+- Custom font integration (Inter)
+- Modern visual effects (glassmorphism, gradients, overlays)
 
-## Features
+## Tech Stack
 
-### Organization
+- **Framework:** Next.js 14 (App Router)
+- **Language:** TypeScript
+- **State Management:** Zustand
+- **Styling:** Tailwind CSS (with custom colors, fonts, and utilities)
+- **UI Components:** Tailwind + Custom components
+- **Image Optimization:** Next.js Image
 
-### Statistics Dashboard
+## Project Structure
 
-### Additional Features
+```
+├── src/
+│   ├── app/                # Pages and entrypoints
+│   ├── components/         # Reusable components (ui, layout, etc)
+│   ├── types/              # TypeScript types and constants
+│   └── ...
+├── public/                 # Static images and assets
+├── tailwind.config.js      # Tailwind configuration
+├── package.json
+└── ...
+```
 
-## Getting Started
+## How to Run the Project
 
 ### Prerequisites
 
-- Node.js 18.x or later
+- Node.js 18.x or higher
 - pnpm (recommended) or npm
 
 ### Installation
@@ -28,76 +48,53 @@ https://github.com/user-attachments/assets/cefee8e4-f8ac-485d-8c92-22b6ffecfa36
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/pallette.git
-cd pallette
+git clone https://github.com/yourusername/island-tech.git
+cd island-tech
 ```
 
 2. Install dependencies:
 
 ```bash
 pnpm install
+# or npm install
 ```
 
-3. Run the development server:
+3. Start the development server:
 
 ```bash
 pnpm dev
+# or npm run dev
 ```
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Project Structure
+## Technical Decisions and Choices
 
-## Technical Stack
+- **Next.js:** Enables SSR, image optimization, modern routing, and excellent performance.
+- **Tailwind CSS:** Makes it easy to create responsive layouts and a custom design system.
+- **Zustand:** Simple and efficient state management for React apps.
+- **Next/Image:** All images use Next.js Image for automatic optimization and lazy loading where appropriate.
+- **Custom Fonts:** Inter from Google fonts, configured globally via Tailwind.
+- **Componentization:** All visual elements are reusable components, making maintenance and design evolution easier.
 
-- **Framework**: Next.js 14
-- **Language**: TypeScript
-- **State Management**: Zustand
-- **Styling**: Tailwind CSS
-- **UI Components**: Shadcn/ui
-
-## Development
-
-### Running Tests
+## Useful Scripts
 
 ```bash
-pnpm test
+pnpm dev         # Run in development mode
+pnpm build       # Production build
+pnpm start       # Run production build
+pnpm lint        # Lint check
+pnpm test        # Run tests (if configured)
 ```
-
-### Code Style
-
-```bash
-pnpm lint
-```
-
-## Known Limitations
-
-## Future Improvements
-
-### Planned Features
-
-### Performance Optimizations
-
-- Server-side rendering
-- Image optimization
-- Caching strategies
-- Progressive web app support
 
 ## Contributing
 
 1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
+2. Create your branch (`git checkout -b feature/new-feature`)
+3. Commit your changes (`git commit -m 'feat: new feature'`)
+4. Push to your branch (`git push origin feature/new-feature`)
 5. Open a Pull Request
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- [Next.js](https://nextjs.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Shadcn/ui](https://ui.shadcn.com/)
-- [Zustand](https://github.com/pmndrs/zustand)
+MIT
