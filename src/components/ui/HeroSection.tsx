@@ -1,7 +1,7 @@
-import ArrowTopRightIcon from "@/components/ui/ArrowTopRightIcon";
 import SocialLinks from "@/components/ui/SocialLinks";
 import DottedArrow from "@/components/ui/DottedArrow";
 import HeroSlider from "@/components/ui/HeroSlider";
+import ViewProductsButton from "@/components/ui/ViewProductsButton";
 
 export default function HeroSection() {
   return (
@@ -35,10 +35,7 @@ export default function HeroSection() {
               </span>
             </div>
           </div>
-          <button className="flex items-center bg-lime-200 hover:bg-lime-400 text-black font-medium pl-4 pr-1 py-1 rounded-full text-sm transition">
-            <span className="pr-2">View All Products</span>
-            <ArrowTopRightIcon />
-          </button>
+          <ViewProductsButton />
         </div>
         <SocialLinks />
       </div>
