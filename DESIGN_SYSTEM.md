@@ -1,4 +1,4 @@
-# Island Tech - Design System
+# Island Tech Commerce - Design System
 
 ## 1. Arquitetura Geral
 
@@ -101,8 +101,6 @@ interface AppState {
 - **Next.js**: SSR, roteamento e otimização
 - **TypeScript**: Tipagem estática e melhor DX
 - **Tailwind CSS**: Estilização rápida e consistente
-- **React Context**: Gerenciamento de estado simples
-- **Jest/React Testing Library**: Testes unitários
 
 ### Padrões de Design
 
