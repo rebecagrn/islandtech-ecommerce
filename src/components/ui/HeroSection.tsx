@@ -10,7 +10,8 @@ export default function HeroSection() {
         <div>
           <div className="flex items-center gap-2 mb-2">
             <div className="inline-flex items-center bg-white text-gray-500 text-xs font-medium px-3 py-2 rounded-full">
-              <span className="text-xs">🎛️</span>Music is Classic
+              <span className="text-xs">🎛️</span>
+              <span>Music is Classic</span>
             </div>
           </div>
           <h1 className="text-5xl text-gray-900 mb-2 leading-tight font-normal max-w-lg tracking-tight">

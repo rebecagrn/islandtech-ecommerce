@@ -1,10 +1,10 @@
 import LandingHeader from "@/components/layout/LandingHeader";
-import PopularColors from "@/components/ui/PopularColors";
+import ProductSidebarCard from "@/components/ui/ProductSidebarCard";
+import PopularColorsCard from "@/components/ui/PopularColorsCard";
 import MoreProductsCard from "@/components/ui/MoreProductsCard";
 import DownloadsCard from "@/components/ui/DownloadsCard";
 import ListeningReleasedCard from "@/components/ui/ListeningReleasedCard";
 import HeroSection from "@/components/ui/HeroSection";
-import ProductSidebarCard from "@/components/ui/ProductSidebarCard";
 
 export default function Home() {
   return (
@@ -27,7 +27,7 @@ export default function Home() {
         </div>
         <aside className=" grid grid-rows-6 gap-4">
           <div className="row-span-1">
-            <PopularColors />
+            <PopularColorsCard />
           </div>
           <div className="row-span-1">
             <ProductSidebarCard
