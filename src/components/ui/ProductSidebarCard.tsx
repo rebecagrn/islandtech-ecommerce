@@ -23,21 +23,21 @@ export default function ProductSidebarCard({
   showOverlay = true,
 }: ProductSidebarCardProps) {
   return (
-    <div
-      className={`relative rounded-3xl flex flex-col justify-between overflow-hidden h-full ${className}`}
+    <Link
+      href="/"
+      className={cn(
+        "relative rounded-3xl flex flex-col justify-between overflow-hidden h-full transition-transform duration-300 ease-out hover:shadow-md",
+        className
+      )}
     >
       {arrowPosition === "top-right" ? (
-        <div className="absolute top-2 right-2 z-20">
-          <Link href="/">
-            <ArrowTopRightIcon variant="secondary" />
-          </Link>
-        </div>
+        <span className="absolute top-2 right-2 z-20">
+          <ArrowTopRightIcon variant="secondary" />
+        </span>
       ) : (
-        <div className="absolute bottom-2 left-2 z-20">
-          <Link href="/">
-            <ArrowTopRightIcon variant="secondary" />
-          </Link>
-        </div>
+        <span className="absolute bottom-2 left-2 z-20">
+          <ArrowTopRightIcon variant="secondary" />
+        </span>
       )}
       <div className="absolute inset-0 flex items-end justify-end z-0">
         <Image
@@ -68,6 +68,6 @@ export default function ProductSidebarCard({
           </div>
         )}
       </div>
-    </div>
+    </Link>
   );
 }

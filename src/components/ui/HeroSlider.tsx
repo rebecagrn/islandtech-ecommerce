@@ -1,7 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import React, { useState } from "react";
+import Image from "next/image";
+import { motion } from "framer-motion";
 import ArrowRightIcon from "@/components/ui/ArrowRightIcon";
 import ArrowLeftIcon from "@/components/ui/ArrowLeftIcon";
 import { floatingDots } from "@/types/constants";
@@ -30,7 +31,7 @@ export default function HeadphoneSlider() {
       />
 
       {floatingDots.map((dot, i) => (
-        <span
+        <motion.span
           key={i}
           className="absolute rounded-full shadow-lg"
           style={{
@@ -41,6 +42,18 @@ export default function HeadphoneSlider() {
             background: dot.color,
             filter: "blur(0.5px)",
             zIndex: 1,
+          }}
+          animate={{
+            y: [0, -8, 0],
+            opacity: [1, 0.7, 1],
+            scale: [1, 1.15, 1],
+          }}
+          transition={{
+            duration: 2 + i * 0.2,
+            repeat: Infinity,
+            repeatType: "loop",
+            ease: "easeInOut",
+            delay: i * 0.15,
           }}
         />
       ))}

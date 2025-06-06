@@ -1,10 +1,11 @@
 import Image from "next/image";
 import HeartIcon from "@/components/ui/HeartIcon";
 import { highlightedProducts } from "@/data/data";
+import Link from "next/link";
 
 export default function MoreProductsCard() {
   return (
-    <div className="relative bg-white/60 rounded-3xl p-4 flex flex-col h-full">
+    <div className="relative bg-white/60 rounded-3xl p-4 flex flex-col h-full transition-transform duration-300 ease-out hover:shadow-md cursor-pointer">
       <span className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-gray-100">
         <HeartIcon className="text-[#F44336]" />
       </span>
@@ -18,7 +19,7 @@ export default function MoreProductsCard() {
         {highlightedProducts.map((_, idx) => (
           <div
             key={idx}
-            className="w-16 h-20 rounded-2xl overflow-hidden bg-gray-100 flex items-center justify-center"
+            className="w-16 h-20 rounded-2xl overflow-hidden bg-gray-100 flex items-center justify-center hover:scale-105 transition-transform duration-300 ease-out"
           >
             <Image
               src={highlightedProducts[idx].image}

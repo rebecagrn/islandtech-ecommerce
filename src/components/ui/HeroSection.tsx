@@ -5,7 +5,7 @@ import ViewProductsButton from "@/components/ui/ViewProductsButton";
 
 export default function HeroSection() {
   return (
-    <section className="flex flex-col md:flex-row justify-between bg-white/60 rounded-3xl p-8 gap-4">
+    <section className="flex flex-col md:flex-row justify-between bg-white/60 rounded-3xl p-8 gap-4 transition-transform duration-300 ease-out hover:shadow-md">
       <div className="flex-1 flex flex-col justify-between max-w-xl">
         <div>
           <div className="flex items-center gap-2 mb-2">

@@ -1,4 +1,5 @@
 import AvatarsGroup from "@/components/ui/AvatarsGroup";
+import Link from "next/link";
 
 const avatars = [
   "https://i.pravatar.cc/40?img=10",
@@ -8,7 +9,7 @@ const avatars = [
 
 export default function DownloadsCard() {
   return (
-    <div className="relative bg-white/60 rounded-3xl px-6 py-4 flex flex-col items-center h-full">
+    <div className="relative bg-white/60 rounded-3xl px-6 py-4 flex flex-col items-center h-full transition-transform duration-300 ease-out hover:shadow-md cursor-pointer">
       <div className="flex justify-center mb-2 z-10">
         <AvatarsGroup avatars={avatars} variant="overlap" size={12} />
       </div>
