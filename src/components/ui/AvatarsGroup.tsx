@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { avatars as defaultAvatars } from "@/data/data";
 
 interface AvatarsGroupProps {
   avatars: string[];
@@ -7,7 +8,7 @@ interface AvatarsGroupProps {
 }
 
 export default function AvatarsGroup({
-  avatars,
+  avatars = defaultAvatars,
   size = 10,
   variant = "overlap",
 }: AvatarsGroupProps) {

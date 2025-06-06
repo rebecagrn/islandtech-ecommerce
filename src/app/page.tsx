@@ -5,6 +5,7 @@ import MoreProductsCard from "@/components/ui/MoreProductsCard";
 import DownloadsCard from "@/components/ui/DownloadsCard";
 import ListeningReleasedCard from "@/components/ui/ListeningReleasedCard";
 import HeroSection from "@/components/ui/HeroSection";
+import { products } from "@/data/data";
 
 export default function Home() {
   return (
@@ -29,24 +30,24 @@ export default function Home() {
           <div className="row-span-1">
             <PopularColorsCard />
           </div>
-          <div className="row-span-1">
-            <ProductSidebarCard
-              title="New Gen X-Bud"
-              image="/assets/images/airpods-pro.jpg"
-              arrowPosition="bottom-left"
-              showOverlay={false}
-              className="h-full bg-white/60"
-            />
-          </div>
-          <div className="row-span-3">
-            <ProductSidebarCard
-              title="Light Grey Surface Headphone"
-              subtitle="Boosted with bass"
-              image="/assets/images/woman-vr-2.png"
-              textAlign="bottom"
-              className="h-full bg-gray-200"
-            />
-          </div>
+          {products.slice(0, 2).map((product, idx) => (
+            <div
+              className={idx === 0 ? "row-span-1" : "row-span-3"}
+              key={product.id}
+            >
+              <ProductSidebarCard
+                title={product.title}
+                subtitle={product.subtitle}
+                image={product.image}
+                arrowPosition={idx === 0 ? "bottom-left" : undefined}
+                showOverlay={idx !== 0}
+                textAlign={idx === 1 ? "bottom" : undefined}
+                className={
+                  idx === 0 ? "h-full bg-white/60" : "h-full bg-gray-200"
+                }
+              />
+            </div>
+          ))}
         </aside>
       </main>
     </div>

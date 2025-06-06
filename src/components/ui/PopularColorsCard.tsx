@@ -1,6 +1,6 @@
-import { colors } from "@/types/constants";
+import { popularColors } from "@/data/data";
 
-export default function PopularColors() {
+export default function PopularColorsCard() {
   return (
     <div className="relative bg-white/60 rounded-3xl p-4 flex flex-col h-full">
       <div className="flex flex-col h-full justify-between">
@@ -8,7 +8,7 @@ export default function PopularColors() {
           Popular Colors
         </div>
         <div className="flex gap-4 justify-between">
-          {colors.map((color, idx) => (
+          {popularColors.map((color, idx) => (
             <span
               key={idx}
               className={`w-8 h-8 rounded-full border-[6px] border-white ${color.gradient}`}

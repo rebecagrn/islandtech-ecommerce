@@ -1,11 +1,6 @@
 import Image from "next/image";
 import HeartIcon from "@/components/ui/HeartIcon";
-
-const productImages = [
-  "/assets/images/box-1.jpeg",
-  "/assets/images/airpods-pro.jpg",
-  "/assets/images/woman-vr.jpeg",
-];
+import { highlightedProducts } from "@/data/data";
 
 export default function MoreProductsCard() {
   return (
@@ -20,13 +15,13 @@ export default function MoreProductsCard() {
         <div className="text-xs text-gray-500 font-normal">460 plus items.</div>
       </div>
       <div className="flex gap-3 mt-4">
-        {productImages.map((_, idx) => (
+        {highlightedProducts.map((_, idx) => (
           <div
             key={idx}
             className="w-16 h-20 rounded-2xl overflow-hidden bg-gray-100 flex items-center justify-center"
           >
             <Image
-              src={productImages[idx]}
+              src={highlightedProducts[idx].image}
               alt={`Product ${idx + 1}`}
               width={64}
               height={80}
