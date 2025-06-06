@@ -1,8 +1,9 @@
 import { popularColors } from "@/data/data";
+import Card from "@/components/ui/Card";
 
 export default function PopularColorsCard() {
   return (
-    <div className="relative bg-white/60 rounded-3xl p-4 flex flex-col h-full transition-transform duration-300 ease-out hover:shadow-md cursor-pointer">
+    <Card className="p-4 flex flex-col">
       <div className="flex flex-col h-full justify-between">
         <div className="font-normal text-gray-900 mb-3 text-base">
           Popular Colors
@@ -17,6 +18,6 @@ export default function PopularColorsCard() {
           ))}
         </div>
       </div>
-    </div>
+    </Card>
   );
 }

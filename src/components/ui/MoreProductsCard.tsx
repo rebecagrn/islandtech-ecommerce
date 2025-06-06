@@ -2,10 +2,11 @@ import Image from "next/image";
 import HeartIcon from "@/components/ui/HeartIcon";
 import { highlightedProducts } from "@/data/data";
 import Link from "next/link";
+import Card from "@/components/ui/Card";
 
 export default function MoreProductsCard() {
   return (
-    <div className="relative bg-white/60 rounded-3xl p-4 flex flex-col h-full transition-transform duration-300 ease-out hover:shadow-md cursor-pointer">
+    <Card className="p-4 flex flex-col">
       <span className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-gray-100">
         <HeartIcon className="text-[#F44336]" />
       </span>
@@ -32,6 +33,6 @@ export default function MoreProductsCard() {
           </div>
         ))}
       </div>
-    </div>
+    </Card>
   );
 }

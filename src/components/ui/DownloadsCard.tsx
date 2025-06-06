@@ -1,5 +1,6 @@
 import AvatarsGroup from "@/components/ui/AvatarsGroup";
 import Link from "next/link";
+import Card from "@/components/ui/Card";
 
 const avatars = [
   "https://i.pravatar.cc/40?img=10",
@@ -9,7 +10,7 @@ const avatars = [
 
 export default function DownloadsCard() {
   return (
-    <div className="relative bg-white/60 rounded-3xl px-6 py-4 flex flex-col items-center h-full transition-transform duration-300 ease-out hover:shadow-md cursor-pointer">
+    <Card className="px-6 py-4 flex flex-col items-center">
       <div className="flex justify-center mb-2 z-10">
         <AvatarsGroup avatars={avatars} variant="overlap" size={12} />
       </div>
@@ -26,6 +27,6 @@ export default function DownloadsCard() {
         <span className="text-lime-200 text-sm">★</span>
         <span>4.6 reviews</span>
       </div>
-    </div>
+    </Card>
   );
 }
