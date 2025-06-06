@@ -2,7 +2,11 @@ export type Product = {
   id: number;
   title: string;
   subtitle?: string;
-  image: string;
+  description: string;
+  images: string[];
+  price: number;
+  rating: number;
+  reviews: number;
   popular?: boolean;
 };
 
@@ -45,14 +49,29 @@ export const products: Product[] = [
   {
     id: 1,
     title: "New Gen X-Bud",
-    image: "/assets/images/airpods-pro.jpg",
+    subtitle: "",
+    description: "Experience next-gen sound with the New Gen X-Bud. Wireless, comfortable, and with deep bass for your daily music journey.",
+    images: [
+      "/assets/images/ipad-air.png",
+      "/assets/images/lens-background.jpeg"
+    ],
+    price: 299.99,
+    rating: 4.8,
+    reviews: 120,
     popular: true,
   },
   {
     id: 2,
     title: "Light Grey Surface Headphone",
     subtitle: "Boosted with bass",
-    image: "/assets/images/woman-vr-2.png",
+    description: "The Light Grey Surface Headphone delivers immersive sound and a sleek design. Perfect for work, travel, and relaxation.",
+    images: [
+      "/assets/images/woman-vr-2.png",
+      "/assets/images/lens-background.jpeg"
+    ],
+    price: 399.99,
+    rating: 4.7,
+    reviews: 98,
     popular: false,
   },
 ];

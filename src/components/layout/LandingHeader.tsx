@@ -1,27 +1,51 @@
+"use client";
 import Image from "next/image";
 import { Logo } from "@/components/layout/Logo";
 import SearchBar from "@/components/shared/SearchBar";
-import HeartIcon from "@/components/ui/HeartIcon";
 import ShoppingBagIcon from "@/components/ui/ShoppingBagIcon";
-import Link from "next/link";
+import HeartIcon from "@/components/ui/HeartIcon";
+import IconButton from "@/components/ui/IconButton";
+import { useState } from "react";
+import SearchIcon from "@/components/ui/SearchIcon";
 
 export default function LandingHeader() {
+  const [showSearch, setShowSearch] = useState(false);
+
   return (
-    <header className="flex items-center justify-between p-2 bg-white/60 rounded-full w-full gap-2">
+    <header className="sticky top-0 z-50 flex items-center justify-between p-2 bg-white/60 rounded-full w-full gap-2 shadow-sm">
       <Logo />
-      <div className="flex-1 flex justify-start">
+      <div className="flex-1 hidden md:flex justify-start">
         <SearchBar />
       </div>
-      <div className="flex items-center gap-2">
-        <button className="flex items-center gap-2 bg-white p-3 rounded-full justify-center">
-          <Link href="/cart">
-            <ShoppingBagIcon className="text-gray-900" />
-          </Link>
-        </button>
-        <div className="flex items-center gap-2 bg-white p-2 rounded-full justify-center">
-          <HeartIcon className="text-[#F44336]" />
+
+      <div className="flex md:hidden">
+        <IconButton ariaLabel="Search" onClick={() => setShowSearch((s) => !s)}>
+          <SearchIcon />
+        </IconButton>
+      </div>
+
+      {showSearch && (
+        <div className="fixed inset-0 bg-black/40 z-50 flex items-start justify-center md:hidden">
+          <div className="bg-white rounded-full mt-4 w-[90vw] max-w-md p-2 flex">
+            <SearchBar />
+            <button
+              onClick={() => setShowSearch(false)}
+              className="ml-4 text-gray-500"
+            >
+              ✕
+            </button>
+          </div>
         </div>
-        <div className="flex items-center gap-3 bg-white p-1 rounded-full">
+      )}
+
+      <div className="flex items-center gap-2">
+        <IconButton href="/cart" ariaLabel="Cart">
+          <ShoppingBagIcon className="text-gray-900" />
+        </IconButton>
+        <IconButton ariaLabel="Favorites">
+          <HeartIcon />
+        </IconButton>
+        <div className="hidden md:flex items-center gap-3 bg-white p-1 rounded-full">
           <span className="font-normal text-gray-900 text-xs ml-2">
             Ryman Alex
           </span>

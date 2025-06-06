@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 
 interface ProductSidebarCardProps {
+  id: number;
   title: string;
   subtitle?: string;
   image: string;
@@ -14,6 +15,7 @@ interface ProductSidebarCardProps {
 }
 
 export default function ProductSidebarCard({
+  id,
   title,
   subtitle,
   image,
@@ -24,9 +26,9 @@ export default function ProductSidebarCard({
 }: ProductSidebarCardProps) {
   return (
     <Link
-      href="/"
+      href={`/product/${id}`}
       className={cn(
-        "relative rounded-3xl flex flex-col justify-between overflow-hidden h-full transition-transform duration-300 ease-out hover:shadow-md",
+        "relative rounded-3xl flex flex-col justify-between overflow-hidden min-h-[120px] md:min-h-auto transition-transform duration-300 ease-out hover:shadow-md p-3 md:p-4",
         className
       )}
     >
@@ -48,17 +50,17 @@ export default function ProductSidebarCard({
           loading="lazy"
         />
         {showOverlay && (
-          <div className="absolute inset-x-0 bottom-0 pointer-events-none bg-gradient-to-t from-white via-white/70 to-transparent h-[50%]" />
+          <div className="absolute inset-x-0 bottom-0 pointer-events-none bg-gradient-to-t from-white via-white/70 to-transparent h-[40%]" />
         )}
       </div>
       <div
         className={cn(
-          "relative z-10 p-4 flex flex-col h-full",
+          "relative z-10 flex flex-col h-full",
           textAlign === "bottom" ? "justify-end" : "justify-between"
         )}
       >
         <div>
-          <h3 className="font-normal text-gray-900 text-lg leading-5 mb-1">
+          <h3 className="font-normal text-gray-900 text-base md:text-lg md:leading-5 mb-1 tracking-tight">
             {title}
           </h3>
         </div>

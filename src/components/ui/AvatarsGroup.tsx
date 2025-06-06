@@ -37,7 +37,7 @@ export default function AvatarsGroup({
             alt="Avatar 2"
             width={size * 4}
             height={size * 4}
-            className="object-cover w-full h-full"
+            className="object-cover w-full h-full z-[99]"
             loading="lazy"
           />
         </span>

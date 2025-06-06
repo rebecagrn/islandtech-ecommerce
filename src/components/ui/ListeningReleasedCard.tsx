@@ -7,7 +7,7 @@ import Card from "@/components/ui/Card";
 const avatars = [
   "https://i.pravatar.cc/40?img=20",
   "https://i.pravatar.cc/40?img=21",
-  "https://i.pravatar.cc/40?img=22",
+  "https://i.pravatar.cc/40?img=23",
 ];
 
 export default function ListeningReleasedCard() {

@@ -1,90 +1,63 @@
-import { notFound } from "next/navigation";
+import { products } from "@/data/data";
 import Image from "next/image";
-import productData from "@/mocks/data.json";
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import ArrowLeftIcon from "@/components/ui/ArrowLeftIcon";
+import Card from "@/components/ui/Card";
 
 interface ProductPageProps {
-  params: {
-    id: string;
-  };
+  params: { id: string };
 }
 
 export default function ProductPage({ params }: ProductPageProps) {
-  const product = productData.products.find((p) => p.id === params.id);
-
-  if (!product) {
-    notFound();
-  }
+  const product = products.find((p) => p.id === Number(params.id));
+  if (!product) return notFound();
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-8">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {/* Product Images */}
-        <div className="space-y-4">
-          <div className="relative h-96 w-full rounded-lg overflow-hidden">
-            <Image
-              src={product.images[0]}
-              alt={product.name}
-              fill
-              className="object-cover"
-            />
-          </div>
-          <div className="grid grid-cols-4 gap-4">
-            {product.images.slice(1).map((image, index) => (
-              <div
-                key={index}
-                className="relative h-24 rounded-lg overflow-hidden"
-              >
-                <Image
-                  src={image}
-                  alt={`${product.name} - Imagem ${index + 2}`}
-                  fill
-                  className="object-cover"
-                />
-              </div>
-            ))}
-          </div>
+    <div className="w-full min-h-screen overflow-auto flex justify-center items-start">
+      <Card className="max-w-2xl w-full p-8 mt-8 mb-8">
+        <Link
+          href="/"
+          className="inline-flex items-center gap-2 mb-8 text-sm px-4 py-2 rounded-full bg-gray-900 hover:bg-gray-700 transition font-medium text-white"
+        >
+          <span className="w-5 h-5 flex items-center justify-center">
+            <ArrowLeftIcon />
+          </span>
+          Back
+        </Link>
+        <h1 className="text-4xl md:text-5xl font-normal text-gray-900 mb-4 leading-tight tracking-tight">
+          {product.title}
+        </h1>
+        {product.subtitle && (
+          <h2 className="text-lg text-gray-600 mb-6 font-normal">
+            {product.subtitle}
+          </h2>
+        )}
+        <div className="rounded-2xl overflow-hidden mb-8 bg-gray-100">
+          <Image
+            src={product.images[1]}
+            alt={product.title}
+            width={800}
+            height={500}
+            className="w-full h-[340px] md:h-[420px] object-cover bg-white"
+            priority
+          />
         </div>
-
-        {/* Product Info */}
-        <div className="space-y-6">
-          <div>
-            <h1 className="text-3xl font-bold text-gray-900">{product.name}</h1>
-            <div className="flex items-center mt-2">
-              <span className="text-yellow-400">★</span>
-              <span className="ml-1 text-gray-600">
-                {product.rating} ({product.reviews} avaliações)
-              </span>
-            </div>
-          </div>
-
-          <p className="text-2xl font-bold text-gray-900">
-            R${" "}
-            {product.price.toLocaleString("pt-BR", {
-              minimumFractionDigits: 2,
-            })}
-          </p>
-
-          <p className="text-gray-600">{product.description}</p>
-
-          <div className="border-t border-gray-200 pt-6">
-            <h2 className="text-xl font-semibold mb-4">Especificações</h2>
-            <dl className="grid grid-cols-2 gap-4">
-              {Object.entries(product.specifications).map(([key, value]) => (
-                <div key={key}>
-                  <dt className="text-sm font-medium text-gray-500 capitalize">
-                    {key}
-                  </dt>
-                  <dd className="mt-1 text-sm text-gray-900">{value}</dd>
-                </div>
-              ))}
-            </dl>
-          </div>
-
-          <button className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors">
-            Adicionar ao Carrinho
-          </button>
+        <div className="flex items-center gap-6 mb-6">
+          <span className="text-2xl font-semibold text-gray-900">
+            ${product.price.toFixed(2)}
+          </span>
+          <span className="flex items-center gap-1 text-yellow-500 font-medium text-sm">
+            ★ {product.rating}
+          </span>
+          <span className="text-gray-500 text-sm">
+            ({product.reviews} reviews)
+          </span>
         </div>
-      </div>
+        <p className="text-gray-700 text-base mb-2 max-w-2xl">
+          {product.description}
+        </p>
+      </Card>
     </div>
   );
 }

@@ -14,7 +14,7 @@ export default function HeroSection() {
               <span>Music is Classic</span>
             </div>
           </div>
-          <h1 className="text-5xl text-gray-900 mb-2 leading-tight font-normal max-w-lg tracking-tight">
+          <h1 className="text-4xl lg:text-5xl text-gray-900 mb-2 lg:mt-4 leading-tight font-normal max-w-full lg:max-w-lg tracking-tight">
             Sequoia Inspiring Musico.
           </h1>
           <div className="flex items-center mb-8 mt-6">
@@ -28,7 +28,7 @@ export default function HeroSection() {
               <DottedArrow />
             </div>
             <div className="flex flex-col ml-2 gap-2">
-              <span className="text-lg font-normal text-gray-900 leading-tight">
+              <span className="text-lg font-normal text-gray-900 leading-tight tracking-tight">
                 Clear Sounds
               </span>
               <span className="text-gray-500 text-sm font-normal -mt-1 max-w-72 leading-4">
@@ -40,7 +40,7 @@ export default function HeroSection() {
         </div>
         <SocialLinks />
       </div>
-      <div className="flex-1 flex items-center justify-center min-w-[340px]">
+      <div className="flex-1 items-center justify-center min-w-[340px] md:block hidden">
         <HeroSlider />
       </div>
     </section>

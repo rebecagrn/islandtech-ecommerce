@@ -1,17 +1,18 @@
 export default function HeartIcon({ className }: { className?: string }) {
   return (
     <svg
-      width="32"
-      height="32"
-      viewBox="0 0 32 32"
-      fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className={className}
+      width="18"
+      height="18"
+      viewBox="0 0 24 24"
+      fill="#F44336"
+      stroke="#F44336"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="lucide lucide-heart-icon lucide-heart"
     >
-      <path
-        d="M16 24s-7-4.534-7-9.333C9 11.119 11.239 9 13.667 9c1.262 0 2.48.627 3.333 1.667C17.853 9.627 19.071 9 20.333 9 22.761 9 25 11.119 25 14.667 25 19.466 16 24 16 24z"
-        fill="currentColor"
-      />
+      <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
     </svg>
   );
 }

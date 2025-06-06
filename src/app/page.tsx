@@ -9,24 +9,24 @@ import { products } from "@/data/data";
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col max-w-7xl mx-auto">
+    <div className="min-h-screen xl:h-screen flex flex-col max-w-7xl mx-auto">
       <LandingHeader />
-      <main className="flex-1 grid grid-cols-1 lg:grid-cols-[4fr_1fr] gap-4 py-4 w-full">
+      <main className="flex-1 grid grid-cols-1 xl:grid-cols-[4fr_1fr] gap-4 py-4 w-full">
         <div className="flex flex-col gap-4">
           <HeroSection />
-          <section className="grid grid-cols-1 md:grid-cols-6 gap-4 pb-8 items-stretch">
-            <div className="md:col-span-2 h-full">
+          <section className="grid grid-cols-1 xl:grid-cols-6 gap-4 xl:pb-8 items-stretch">
+            <div className="xl:col-span-2 h-full">
               <MoreProductsCard />
             </div>
-            <div className="md:col-span-1 h-full">
+            <div className="xl:col-span-1 h-full">
               <DownloadsCard />
             </div>
-            <div className="md:col-span-3 h-full">
+            <div className="xl:col-span-3 h-full">
               <ListeningReleasedCard />
             </div>
           </section>
         </div>
-        <aside className=" grid grid-rows-6 gap-4">
+        <aside className="grid grid-rows-6 gap-4">
           <div className="row-span-1">
             <PopularColorsCard />
           </div>
@@ -36,9 +36,10 @@ export default function Home() {
               key={product.id}
             >
               <ProductSidebarCard
+                id={product.id}
                 title={product.title}
                 subtitle={product.subtitle}
-                image={product.image}
+                image={product.images[0]}
                 arrowPosition={idx === 0 ? "bottom-left" : undefined}
                 showOverlay={idx !== 0}
                 textAlign={idx === 1 ? "bottom" : undefined}
