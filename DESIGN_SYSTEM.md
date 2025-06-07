@@ -5,52 +5,40 @@
 ### Diagrama de Componentes
 
 ```
-├── pages/
-│   ├── index.tsx (Página Principal)
-│   └── produto/[id].tsx (Página de Detalhes)
-├── components/
-│   ├── layout/
-│   │   ├── Header.tsx
-│   │   ├── Footer.tsx
-│   │   └── Layout.tsx
-│   ├── product/
-│   │   ├── ProductCard.tsx
-│   │   ├── ProductGrid.tsx
-│   │   └── ProductDetails.tsx
-│   └── ui/
-│       ├── Button.tsx
-│       ├── Input.tsx
-│       └── Image.tsx
-└── data/
-    └── data.json
+├── src/
+│   ├── app/                # Páginas e entrypoints
+│   ├── components/
+│   │   ├── layout/         # Header, Footer, Layout
+│   │   ├── product/        # Componentes específicos de produto
+│   │   ├── shared/         # Primitivos de UI reutilizáveis (Card, IconButton, ícones, etc)
+│   │   └── ui/             # Componentes de seção e recursos
+│   └── types/              # Tipos TypeScript
+└── public/                 # Imagens e assets estáticos
 ```
+
+- **shared/**: Contém componentes genéricos e ícones usados em todo o app (ex: Card, IconButton).
+- **ui/**: Componentes de seção, cards de destaque, sliders, etc.
+- **product/**: Componentes específicos de produto (ex: ProductCard).
 
 ### Fluxo de Dados
 
-- Dados são carregados do JSON local
-- Estado global gerenciado com React Context
-- Props drilling minimizado através de composição de componentes
+- Dados tipados e mockados em `/data/data.ts`.
+- Estado global mínimo, props drilling reduzido via composição.
+- Componentes compartilham primitivos de `shared` para consistência visual.
 
 ### Modelo de Estado
 
 ```typescript
 interface Product {
   id: string;
-  name: string;
+  title: string;
+  subtitle?: string;
   description: string;
   price: number;
   images: string[];
-  category: string;
+  rating: number;
+  reviews: number;
   // outros campos necessários
-}
-
-interface AppState {
-  products: Product[];
-  selectedProduct: Product | null;
-  filters: {
-    category: string;
-    priceRange: [number, number];
-  };
 }
 ```
 
@@ -58,68 +46,34 @@ interface AppState {
 
 ### Layout Components
 
-- **Header**: Navegação principal e logo
+- **LandingHeader**: Navegação principal e logo
 - **Footer**: Links úteis e informações da empresa
-- **Layout**: Wrapper para páginas com estrutura comum
 
 ### Product Components
 
-- **ProductCard**: Card de produto com imagem, título e preço
-- **ProductGrid**: Grid responsivo de produtos
-- **ProductDetails**: Visualização detalhada do produto
+- **ProductCard**: Card de produto detalhado
+- **ProductSidebarCard**: Card lateral de produto
 
 ### UI Components
 
-- **Button**: Botões reutilizáveis com variantes
-- **Input**: Campos de formulário padronizados
-- **Image**: Componente de imagem otimizado
+- **Card** (em `shared/`): Primitivo base para todos os cards
+- **IconButton** (em `shared/`): Botão de ícone reutilizável
+- **Ícones** (em `shared/`): ArrowTopRightIcon, HeartIcon, etc
+- **AvatarsGroup**: Grupo de avatares
+- **HeroSection**: Seção principal do landing
+- **MoreProductsCard**, **DownloadsCard**, **ListeningReleasedCard**, **PopularColorsCard**: Cards de seção
 
 ## 3. Gerenciamento de Dados
 
-### Estrutura dos Dados
-
-- Dados mockados em `/data/data.json`
+- Dados mockados em `/data/data.ts`
 - Tipagem forte com TypeScript
 - Interfaces bem definidas para cada entidade
 
-### Estratégia de Persistência
-
-- Dados carregados via import direto do JSON
-- Simulação de API com funções assíncronas
-- Cache local para melhor performance
-
-### Mecanismos de Busca e Filtragem
-
-- Filtros por categoria
-- Busca por texto
-- Ordenação por preço/relevância
-
 ## 4. Decisões Técnicas
 
-### Tecnologias e Bibliotecas
-
-- **Next.js**: SSR, roteamento e otimização
-- **TypeScript**: Tipagem estática e melhor DX
-- **Tailwind CSS**: Estilização rápida e consistente
-
-### Padrões de Design
-
-- Atomic Design para componentes
-- Mobile First para responsividade
-- Componentes funcionais com hooks
-- Composição sobre herança
-
-### Considerações Técnicas
-
-- **Performance**:
-  - Code splitting automático
-  - Lazy loading de imagens
-  - Otimização de bundles
-- **Usabilidade**:
-  - Feedback visual em interações
-  - Estados de loading
-  - Mensagens de erro claras
-- **Escalabilidade**:
-  - Estrutura modular
-  - Componentes reutilizáveis
-  - Fácil manutenção
+- **Next.js**: SSR, roteamento moderno, otimização de imagens
+- **Tailwind CSS**: Design system responsivo e rápido
+- **Componentização**: Primitivos em `shared/`, seções em `ui/`, produto em `product/`
+- **Performance**: Lazy loading de imagens, otimização de bundles
+- **Acessibilidade**: HTML semântico, alt texts, navegação por teclado
+- **Design**: Pixel-perfect, glassmorphism, gradientes, responsividade mobile/desktop

@@ -8,6 +8,7 @@ A modern e-commerce web application built with Next.js, TypeScript, and Tailwind
 
 - Responsive layout and custom design system
 - Reusable components (cards, sliders, sidebar, avatars, etc)
+- **Shared directory for UI primitives and icons**
 - Image optimization with Next.js
 - Lazy loading for offscreen images
 - Custom font integration (Inter)
@@ -27,7 +28,11 @@ A modern e-commerce web application built with Next.js, TypeScript, and Tailwind
 ```
 ├── src/
 │   ├── app/                # Pages and entrypoints
-│   ├── components/         # Reusable components (ui, layout, etc)
+│   ├── components/
+│   │   ├── layout/         # Layout components (header, footer, etc)
+│   │   ├── product/        # Product-specific components
+│   │   ├── shared/         # Shared UI primitives (Card, IconButton, icons, etc)
+│   │   └── ui/             # Feature and section UI components
 │   ├── types/              # TypeScript types and constants
 │   └── ...
 ├── public/                 # Static images and assets
@@ -35,6 +40,11 @@ A modern e-commerce web application built with Next.js, TypeScript, and Tailwind
 ├── package.json
 └── ...
 ```
+
+### Shared Components
+
+- All generic UI primitives (e.g., `Card`, `IconButton`) are now in `src/components/shared`.
+- Feature-specific or section components remain in `ui` or `product`.
 
 ## How to Run the Project
 
@@ -75,7 +85,7 @@ pnpm dev
 - **Zustand:** Simple and efficient state management for React apps.
 - **Next/Image:** All images use Next.js Image for automatic optimization and lazy loading where appropriate.
 - **Custom Fonts:** Inter from Google fonts, configured globally via Tailwind.
-- **Componentization:** All visual elements are reusable components, making maintenance and design evolution easier.
+- **Componentization:** All visual elements are reusable components, with shared primitives in `shared` for maintainability.
 
 ## Useful Scripts
 
