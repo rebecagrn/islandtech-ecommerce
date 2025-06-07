@@ -1,6 +1,6 @@
 # IslandTech App
 
-A modern e-commerce web application built with Next.js, TypeScript, and Tailwind CSS, focused on performance, pixel-perfect design, and user experience.
+A modern and conceptual e-commerce web application built with Next.js, TypeScript, and Tailwind CSS, focused on performance, pixel-perfect design, and user experience.
 
 ## Demo
 
@@ -58,8 +58,8 @@ A modern e-commerce web application built with Next.js, TypeScript, and Tailwind
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/island-tech.git
-cd island-tech
+git clone https://github.com/yourusername/islandtech-ecommerce.git
+cd islandtech-ecommerce
 ```
 
 2. Install dependencies:
@@ -82,7 +82,6 @@ pnpm dev
 
 - **Next.js:** Enables SSR, image optimization, modern routing, and excellent performance.
 - **Tailwind CSS:** Makes it easy to create responsive layouts and a custom design system.
-- **Zustand:** Simple and efficient state management for React apps.
 - **Next/Image:** All images use Next.js Image for automatic optimization and lazy loading where appropriate.
 - **Custom Fonts:** Inter from Google fonts, configured globally via Tailwind.
 - **Componentization:** All visual elements are reusable components, with shared primitives in `shared` for maintainability.
