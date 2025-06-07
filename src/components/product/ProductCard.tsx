@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Product } from "@/data/data";
-import Card from "@/components/ui/Card";
-import ArrowLeftIcon from "@/components/ui/ArrowLeftIcon";
+import Card from "@/components/shared/Card";
+import ArrowLeftIcon from "@/components/ui/icons/ArrowLeftIcon";
 
 interface ProductCardProps {
   product: Product;

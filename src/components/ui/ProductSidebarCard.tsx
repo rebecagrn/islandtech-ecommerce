@@ -1,5 +1,5 @@
 import Image from "next/image";
-import ArrowTopRightIcon from "@/components/ui/ArrowTopRightIcon";
+import ArrowTopRightIcon from "@/components/ui/icons/ArrowTopRightIcon";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 

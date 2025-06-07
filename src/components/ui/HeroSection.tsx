@@ -1,7 +1,7 @@
 import SocialLinks from "@/components/ui/SocialLinks";
-import DottedArrow from "@/components/ui/DottedArrow";
 import HeroSlider from "@/components/ui/HeroSlider";
 import ViewProductsButton from "@/components/ui/ViewProductsButton";
+import DottedArrowIcon from "@/components/ui/icons/DottedArrowIcon";
 
 export default function HeroSection() {
   return (
@@ -25,7 +25,7 @@ export default function HeroSection() {
               >
                 01
               </span>
-              <DottedArrow />
+              <DottedArrowIcon />
             </div>
             <div className="flex flex-col ml-2 gap-2">
               <span className="text-lg font-normal text-gray-900 leading-tight tracking-tight">

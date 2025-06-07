@@ -3,10 +3,10 @@ import { useState } from "react";
 import Image from "next/image";
 import { Logo } from "@/components/layout/Logo";
 import SearchBar from "@/components/shared/SearchBar";
-import ShoppingBagIcon from "@/components/ui/ShoppingBagIcon";
-import HeartIcon from "@/components/ui/HeartIcon";
-import IconButton from "@/components/ui/IconButton";
-import SearchIcon from "@/components/ui/SearchIcon";
+import ShoppingBagIcon from "@/components/ui/icons/ShoppingBagIcon";
+import HeartIcon from "@/components/ui/icons/HeartIcon";
+import IconButton from "@/components/shared/IconButton";
+import SearchIcon from "@/components/ui/icons/SearchIcon";
 
 export default function LandingHeader() {
   const [showSearch, setShowSearch] = useState(false);

@@ -1,5 +1,5 @@
 import { popularColors } from "@/data/data";
-import Card from "@/components/ui/Card";
+import Card from "@/components/shared/Card";
 
 export default function PopularColorsCard() {
   return (

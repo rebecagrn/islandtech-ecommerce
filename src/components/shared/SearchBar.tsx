@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { debounce } from "lodash";
-import SearchIcon from "@/components/ui/SearchIcon";
+import SearchIcon from "@/components/ui/icons/SearchIcon";
 
 interface SearchBarProps {
   placeholder?: string;

@@ -1,13 +1,15 @@
-interface DottedArrowProps {
+import { cn } from "@/lib/utils";
+
+interface DottedArrowIconProps {
   className?: string;
 }
 
-export default function DottedArrow({ className }: DottedArrowProps) {
+export default function DottedArrowIcon({ className }: DottedArrowIconProps) {
   return (
     <svg
       width="120"
       height="24"
-      className="mx-2"
+      className={cn("mx-2", className)}
       viewBox="0 0 120 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

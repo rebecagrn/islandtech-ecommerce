@@ -1,4 +1,4 @@
-import ArrowTopRightIcon from "@/components/ui/ArrowTopRightIcon";
+import ArrowTopRightIcon from "@/components/ui/icons/ArrowTopRightIcon";
 
 export default function ViewProductsButton() {
   return (

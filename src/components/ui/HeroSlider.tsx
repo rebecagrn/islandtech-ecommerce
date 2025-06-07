@@ -3,8 +3,8 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import ArrowRightIcon from "@/components/ui/ArrowRightIcon";
-import ArrowLeftIcon from "@/components/ui/ArrowLeftIcon";
+import ArrowRightIcon from "@/components/ui/icons/ArrowRightIcon";
+import ArrowLeftIcon from "@/components/ui/icons/ArrowLeftIcon";
 import { floatingDots } from "@/types/constants";
 
 const headphoneImages = [

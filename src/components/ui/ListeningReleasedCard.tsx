@@ -1,8 +1,8 @@
 import Image from "next/image";
-import ArrowTopRightIcon from "@/components/ui/ArrowTopRightIcon";
+import ArrowTopRightIcon from "@/components/ui/icons/ArrowTopRightIcon";
 import AvatarsGroup from "@/components/ui/AvatarsGroup";
 import Link from "next/link";
-import Card from "@/components/ui/Card";
+import Card from "@/components/shared/Card";
 
 const avatars = [
   "https://i.pravatar.cc/40?img=20",

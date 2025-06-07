@@ -1,8 +1,8 @@
 import Image from "next/image";
-import HeartIcon from "@/components/ui/HeartIcon";
+import HeartIcon from "@/components/ui/icons/HeartIcon";
 import { highlightedProducts } from "@/data/data";
 import Link from "next/link";
-import Card from "@/components/ui/Card";
+import Card from "@/components/shared/Card";
 
 export default function MoreProductsCard() {
   return (

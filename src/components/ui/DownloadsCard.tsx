@@ -1,5 +1,5 @@
 import AvatarsGroup from "@/components/ui/AvatarsGroup";
-import Card from "@/components/ui/Card";
+import Card from "@/components/shared/Card";
 
 const avatars = [
   "https://i.pravatar.cc/40?img=10",

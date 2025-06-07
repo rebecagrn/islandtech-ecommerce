@@ -1,7 +1,7 @@
 import { products } from "@/data/data";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import ArrowLeftIcon from "@/components/ui/ArrowLeftIcon";
+import ArrowLeftIcon from "@/components/ui/icons/ArrowLeftIcon";
 import Footer from "@/components/layout/Footer";
 import ProductCard from "@/components/product/ProductCard";
 
