@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 
-export function useIsDesktop() {
-  const [isDesktop, setIsDesktop] = useState(false);
+export function useIsMobile() {
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const checkScreenSize = () => {
-      setIsDesktop(window.innerWidth >= 768); // md breakpoint
+      setIsMobile(window.innerWidth < 768); // md breakpoint
     };
 
     checkScreenSize();
@@ -14,5 +14,5 @@ export function useIsDesktop() {
     return () => window.removeEventListener("resize", checkScreenSize);
   }, []);
 
-  return isDesktop;
+  return isMobile;
 }

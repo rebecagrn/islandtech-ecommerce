@@ -1,11 +1,11 @@
 "use client";
+import { useState } from "react";
 import Image from "next/image";
 import { Logo } from "@/components/layout/Logo";
 import SearchBar from "@/components/shared/SearchBar";
 import ShoppingBagIcon from "@/components/ui/ShoppingBagIcon";
 import HeartIcon from "@/components/ui/HeartIcon";
 import IconButton from "@/components/ui/IconButton";
-import { useState } from "react";
 import SearchIcon from "@/components/ui/SearchIcon";
 
 export default function LandingHeader() {
@@ -18,19 +18,13 @@ export default function LandingHeader() {
         <SearchBar />
       </div>
 
-      <div className="flex md:hidden">
-        <IconButton ariaLabel="Search" onClick={() => setShowSearch((s) => !s)}>
-          <SearchIcon />
-        </IconButton>
-      </div>
-
       {showSearch && (
         <div className="fixed inset-0 bg-black/40 z-50 flex items-start justify-center md:hidden">
           <div className="bg-white rounded-full mt-4 w-[90vw] max-w-md p-2 flex">
             <SearchBar />
             <button
-              onClick={() => setShowSearch(false)}
               className="ml-4 text-gray-500"
+              onClick={() => setShowSearch(false)}
             >
               ✕
             </button>
@@ -39,6 +33,14 @@ export default function LandingHeader() {
       )}
 
       <div className="flex items-center gap-2">
+        <div className="md:hidden">
+          <IconButton
+            ariaLabel="Search"
+            onClick={() => setShowSearch((s) => !s)}
+          >
+            <SearchIcon />
+          </IconButton>
+        </div>
         <IconButton href="/cart" ariaLabel="Cart">
           <ShoppingBagIcon className="text-gray-900" />
         </IconButton>

@@ -30,14 +30,14 @@ export default function AvatarsGroup({
           />
         </span>
         <span
-          className={`absolute left-1/2 -translate-x-1/2 w-${size} h-${size} rounded-full border-2 border-white overflow-hidden z-20`}
+          className={`absolute left-1/2 -translate-x-1/2 w-${size} h-${size} rounded-full border-2 border-white overflow-hidden z-[99]`}
         >
           <Image
             src={avatars[1]}
             alt="Avatar 2"
             width={size * 4}
             height={size * 4}
-            className="object-cover w-full h-full z-[99]"
+            className="object-cover w-full h-full"
             loading="lazy"
           />
         </span>

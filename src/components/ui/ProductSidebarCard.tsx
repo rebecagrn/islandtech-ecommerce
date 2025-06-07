@@ -28,7 +28,7 @@ export default function ProductSidebarCard({
     <Link
       href={`/product/${id}`}
       className={cn(
-        "relative rounded-3xl flex flex-col justify-between overflow-hidden min-h-[120px] md:min-h-auto transition-transform duration-300 ease-out hover:shadow-md p-3 md:p-4",
+        "relative rounded-3xl flex flex-col justify-between overflow-hidden min-h-[120px] md:min-h-full transition-transform duration-300 ease-out hover:shadow-md p-3 md:p-4",
         className
       )}
     >
@@ -65,7 +65,7 @@ export default function ProductSidebarCard({
           </h3>
         </div>
         {subtitle && (
-          <div className={`text-xs text-gray-600 font-normal leading-tight`}>
+          <div className="text-xs text-gray-600 font-normal leading-tight">
             {subtitle}
           </div>
         )}

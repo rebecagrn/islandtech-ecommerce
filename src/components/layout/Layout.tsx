@@ -7,9 +7,7 @@ interface LayoutProps {
 export default function Layout({ children }: LayoutProps) {
   return (
     <>
-      <main className="flex-grow container mx-auto px-4 pt-8 overflow-hidden">
-        {children}
-      </main>
+      <main className="flex-grow container mx-auto px-4 pt-8">{children}</main>
     </>
   );
 }

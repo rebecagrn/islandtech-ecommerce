@@ -4,7 +4,7 @@ import { Logo } from "@/components/layout/Logo";
 export default function Footer() {
   return (
     <footer className="w-full py-8 px-4">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
         <div className="flex-1 min-w-[220px] flex flex-col items-center md:items-start text-center md:text-left">
           <div className="flex items-center gap-2 mb-2">
             <Logo />

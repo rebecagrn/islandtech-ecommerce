@@ -21,7 +21,7 @@ export default function HeadphoneSlider() {
     );
 
   return (
-    <div className="relative aspect-square w-[420px] flex items-center justify-center">
+    <div className="relative aspect-square w-[420px] md:w-[380px] lg:w-full flex items-center justify-center">
       <Image
         src={headphoneImages[current]}
         alt="Headphone"
@@ -60,10 +60,10 @@ export default function HeadphoneSlider() {
       <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex z-20">
         <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-md hover:bg-gray-100 transition">
           <button aria-label="Previous" onClick={prev}>
-            <ArrowLeftIcon />
+            <ArrowLeftIcon className="hover:text-lime-500" />
           </button>
           <button aria-label="Next" onClick={next}>
-            <ArrowRightIcon />
+            <ArrowRightIcon className="hover:text-lime-500" />
           </button>
         </div>
       </div>

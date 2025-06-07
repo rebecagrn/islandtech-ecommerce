@@ -40,7 +40,7 @@ export default function HeroSection() {
         </div>
         <SocialLinks />
       </div>
-      <div className="flex-1 items-center justify-center min-w-[340px] md:block hidden">
+      <div className="flex-1 items-center justify-center min-w-[340px] xl:block hidden">
         <HeroSlider />
       </div>
     </section>

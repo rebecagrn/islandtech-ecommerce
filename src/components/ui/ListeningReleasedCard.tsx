@@ -22,7 +22,7 @@ export default function ListeningReleasedCard() {
         <div className="font-normal text-gray-900 text-base leading-tight mb-2 max-w-32">
           Listening Has Been Released
         </div>
-        <AvatarsGroup variant="overlap" avatars={avatars} size={12} />
+        <AvatarsGroup variant="centered" avatars={avatars} size={12} />
       </div>
       <div className="absolute inset-0 flex items-end justify-end z-0">
         <Image
