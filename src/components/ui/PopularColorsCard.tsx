@@ -4,7 +4,7 @@ import Card from "@/components/shared/Card";
 export default function PopularColorsCard() {
   return (
     <Card className="p-4 flex flex-col">
-      <div className="flex items-start flex-col h-full justify-between">
+      <div className="flex items-start flex-col h-full justify-between gap-4 lg:gap-0">
         <div className="font-normal text-gray-900 lg:mb-3 text-base tracking-tight">
           Popular Colors
         </div>

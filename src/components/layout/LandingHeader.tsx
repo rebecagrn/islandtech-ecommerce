@@ -12,7 +12,7 @@ export default function LandingHeader() {
   const [showSearch, setShowSearch] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 flex items-center justify-between p-2 bg-white/60 rounded-full w-full gap-2 shadow-sm">
+    <header className="sticky top-4 z-50 flex items-center justify-between p-2 bg-white/60 rounded-full w-full gap-2 shadow-sm">
       <Logo />
       <div className="flex-1 hidden md:flex justify-start">
         <SearchBar />

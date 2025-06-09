@@ -26,18 +26,18 @@ export default function Home() {
             </div>
           </section>
         </div>
-        <aside className="grid grid-rows-3 md:grid-rows-6 gap-4 md:col-span-1">
-          <div className="row-span-1">
+        <aside className="flex flex-col gap-4 h-full min-h-0">
+          <div>
             <PopularColorsCard />
           </div>
           {products.slice(0, 2).map((product, idx) => (
             <div
-              className={
-                idx === 0
-                  ? "row-span-1 col-span-2 lg:col-span-full"
-                  : "row-span-3 col-span-3 lg:col-span-full"
-              }
               key={product.id}
+              className={
+                idx === 1
+                  ? "flex-1 flex flex-col min-h-[300px] lg:min-h-0 max-h-[425px]"
+                  : "min-h-[300px] lg:min-h-[160px]"
+              }
             >
               <ProductSidebarCard
                 id={product.id}
