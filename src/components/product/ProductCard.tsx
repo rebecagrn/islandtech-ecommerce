@@ -3,6 +3,8 @@ import Link from "next/link";
 import { Product } from "@/data/data";
 import Card from "@/components/shared/Card";
 import ArrowLeftIcon from "@/components/ui/icons/ArrowLeftIcon";
+import { AddToCartButton } from "@/components/product/AddToCartButton";
+import { ShoppingCartIcon } from "@/components/ui/icons/ShoppingCartIcon";
 
 interface ProductCardProps {
   product: Product;
@@ -52,6 +54,9 @@ export default function ProductCard({ product }: ProductCardProps) {
       <p className="text-gray-700 text-base mb-2 max-w-2xl">
         {product.description}
       </p>
+      <div className="flex items-center justify-end gap-2 mt-5">
+        <AddToCartButton product={product} />
+      </div>
     </Card>
   );
 }

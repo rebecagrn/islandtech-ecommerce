@@ -9,12 +9,12 @@ import HeroSection from "@/components/ui/HeroSection";
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col max-w-4xl lg:max-w-5xl xl:max-w-7xl mx-auto">
+    <>
       <LandingHeader />
       <main className="flex-1 grid grid-cols-1 lg:grid-cols-[2fr_1fr] xl:grid-cols-[4fr_1fr] gap-3 lg:gap-4 py-4 w-full">
         <div className="flex flex-col gap-4">
           <HeroSection />
-          <section className="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-6 gap-4 xl:pb-8 items-stretch">
+          <section className="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-6 gap-4 items-stretch">
             <div className="col-span-2 h-full">
               <MoreProductsCard />
             </div>
@@ -55,6 +55,6 @@ export default function Home() {
           ))}
         </aside>
       </main>
-    </div>
+    </>
   );
 }

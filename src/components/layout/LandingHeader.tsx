@@ -7,12 +7,20 @@ import ShoppingBagIcon from "@/components/ui/icons/ShoppingBagIcon";
 import HeartIcon from "@/components/ui/icons/HeartIcon";
 import IconButton from "@/components/shared/IconButton";
 import SearchIcon from "@/components/ui/icons/SearchIcon";
+import { useAppStore } from "@/store/appStore";
+import { useIsMobile } from "@/hooks/useIsMobile";
 
 export default function LandingHeader() {
   const [showSearch, setShowSearch] = useState(false);
+  const cartQuantity = useAppStore((state) => state.getCartQuantity());
+  const isMobile = useIsMobile();
 
   return (
-    <header className="sticky top-4 z-50 flex items-center justify-between p-2 bg-white/60 rounded-full w-full gap-2 shadow-sm">
+    <header
+      className={`${
+        isMobile ? "sticky" : " "
+      } top-4 z-50 flex items-center justify-between p-2 bg-white/60 backdrop-blur-md rounded-full w-full gap-2 shadow-sm`}
+    >
       <Logo />
       <div className="flex-1 hidden md:flex justify-start">
         <SearchBar />
@@ -41,8 +49,13 @@ export default function LandingHeader() {
             <SearchIcon />
           </IconButton>
         </div>
-        <IconButton href="/cart" ariaLabel="Cart">
+        <IconButton href="/cart" aria-label="Cart" className="relative">
           <ShoppingBagIcon className="text-gray-900" />
+          {cartQuantity > 0 && (
+            <span className="absolute -top-1 -right-1 text-xs bg-gray-900 text-white rounded-full w-5 h-5 flex items-center justify-center">
+              {cartQuantity}
+            </span>
+          )}
         </IconButton>
         <IconButton ariaLabel="Favorites">
           <HeartIcon />

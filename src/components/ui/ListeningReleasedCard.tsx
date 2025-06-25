@@ -15,7 +15,7 @@ export default function ListeningReleasedCard() {
     <Card className="p-4 flex flex-row h-full items-center overflow-hidden gap-4">
       <div className="flex flex-col justify-between h-full z-10 flex-1 min-w-0">
         <div className="flex items-center gap-2 mb-2">
-          <span className="bg-transparent text-gray-600/80 text-[11px] px-2 py-1 rounded-full flex items-center gap-1 border-2 border-gray-200">
+          <span className="bg-transparent text-gray-600/80 text-[11px] px-2 py-0.5 rounded-full flex items-center gap-1 border-2 border-gray-200">
             <span className="">❤️‍🔥</span> Popular
           </span>
         </div>

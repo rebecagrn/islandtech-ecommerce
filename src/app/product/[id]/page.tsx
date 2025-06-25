@@ -1,9 +1,9 @@
 import { products } from "@/data/data";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import ArrowLeftIcon from "@/components/ui/icons/ArrowLeftIcon";
 import Footer from "@/components/layout/Footer";
 import ProductCard from "@/components/product/ProductCard";
+import LandingHeader from "@/components/layout/LandingHeader";
 
 interface ProductPageProps {
   params: { id: string };
@@ -15,7 +15,8 @@ export default function ProductPage({ params }: ProductPageProps) {
 
   return (
     <>
-      <div className="w-full min-h-screen overflow-auto flex justify-center items-start">
+      <LandingHeader />
+      <div className="w-full min-h-screen overflow-auto flex justify-center items-start pt-16">
         <ProductCard product={product} />
       </div>
       <Footer />
