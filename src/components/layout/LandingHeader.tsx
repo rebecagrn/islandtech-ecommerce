@@ -27,7 +27,7 @@ export default function LandingHeader() {
       </div>
 
       {showSearch && (
-        <div className="fixed inset-0 bg-black/40 z-50 flex items-start justify-center md:hidden">
+        <div className="fixed inset-0 z-50 flex items-start justify-center md:hidden">
           <div className="bg-white rounded-full mt-4 w-[90vw] max-w-md p-2 flex">
             <SearchBar />
             <button
